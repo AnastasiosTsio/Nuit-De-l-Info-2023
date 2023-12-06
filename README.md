@@ -2,7 +2,7 @@
 ## Auteurs :
 - [Arthur Mermet](mermet.arthur@gmail.com)
 - [Matthieu Muller](matthieu.muller8@)
-- [Noah Kohrs]()
 - [Anastasios TSIOMPANIDIS]()
+- [Noah Kohrs](https://github.com/noahkohrs)
 - [Noé Flechon]()
 - [Julien Delphin]()
