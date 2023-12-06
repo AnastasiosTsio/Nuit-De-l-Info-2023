@@ -3,6 +3,6 @@
 - [Arthur Mermet](https://github.com/DNSJambon)
 - [Matthieu Muller](matthieu.muller8@)
 - [Anastasios TSIOMPANIDIS]()
-- [Noah Kohrs](https://github.com/)
+- [Noah Kohrs](https://github.com/noahkohrs)
 - [Noé Flechon]()
 - [Julien Delphin]()
