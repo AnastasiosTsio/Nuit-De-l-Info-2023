@@ -1,0 +1,24 @@
+  {
+      "Questionnaire" : [
+          {
+              "question": "Planter des arbres pour réduire quasiment tout le CO2 ?",
+              "effects": {
+                "oui":{
+                  "habitant":15,
+                  "argent":1000
+                },
+                "jsp": null,
+                "non": null
+              }
+          },
+          {
+              "question": "Privilégier de protéger les forêts existantes ou l'océan ?",
+              "effects": {
+                "oui": "hagrid",
+                "jsp": "est",
+                "non": "meilleur"
+              }
+          }
+      ]
+    }
+    
