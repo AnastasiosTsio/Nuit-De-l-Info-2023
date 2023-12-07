@@ -6,7 +6,7 @@ var questionnaireJSON: any;
 const jsonFile = "Questionnaire.json";
 function fetchdata() {
   return fetch(jsonFile)
-    .then((response) => response.json())
+    .then((response) => response.json()) // aled
     .then((data) => {
       // Utilisez les données JSON ici
       questionnaireJSON = data;
