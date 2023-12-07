@@ -13,6 +13,7 @@ function getFirstQuestion(jsonData) {
 }
 // Utiliser la fonction pour obtenir la première question
 var firstQuestion = getFirstQuestion(questionnaireJSON);
+document.getElementById("counter").innerText = firstQuestion;
 // Afficher la première question
 if (firstQuestion !== undefined) {
     console.log("Première question :", firstQuestion);
