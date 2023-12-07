@@ -6,6 +6,25 @@ body {
     margin: 0;
 }
 
+div{
+    border: 1px solid red;
+}
 canvas {
     border: 1px solid black;
+}
+
+.answers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.yesButton{
+    order: 1;
+}
+
+.noButton{
+    order:5;
 }

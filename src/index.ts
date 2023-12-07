@@ -10,5 +10,5 @@ document.getElementById("myButton").addEventListener("click", function () {
   if (!counter) return;
   let count = parseInt(counter.innerHTML) ;
   count += 1;
-  counter.innerHTML = count.toString();
+  counter.innerHTML = count.toString() ;
 });

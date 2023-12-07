@@ -1,16 +1,37 @@
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 var player = { x: 50, y: 50, width: 50, height: 50, speed: 5 };
+var numberOfInhabitant = 0;
+var globalHealth = 100;
+var globalMoney = 1000;
+var averageTemperature = 0;
+var date = 1965;
 function drawPlayer() {
     ctx.fillStyle = "blue";
     ctx.fillRect(player.x, player.y, player.width, player.height);
 }
+function drawDate() {
+    ctx.fillStyle = "black";
+    ctx.font = "30px Arial";
+    ctx.strokeRect(450, 10, 200, 50);
+    ctx.fillText(date.toString(), 500, 50);
+}
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+function updateDate(event) {
+    switch (event.key) {
+        case "ArrowLeft":
+            date += 10;
+            break;
+        default:
+            break;
+    }
 }
 function updateGame() {
     clearCanvas();
     drawPlayer();
+    drawDate();
     requestAnimationFrame(updateGame);
 }
 function movePlayer(event) {
@@ -29,5 +50,6 @@ function movePlayer(event) {
             break;
     }
 }
+document.addEventListener("keydown", updateDate);
 document.addEventListener("keydown", movePlayer);
 updateGame();
