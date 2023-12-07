@@ -12,7 +12,16 @@ function fetchdata() {
       questionnaireJSON = data;
     })
     .catch(error => {
-      console.error('Une erreur s\'est produite lors de la récupération du fichier JSON :', error);
+      const jsonFile = "Questionnaire.json";
+      fetch(jsonFile)
+      .then(response => response.json())
+      .then(data => {
+        // Utilisez les données JSON ici
+        questionnaireJSON = data;
+      })
+      .catch(error => {
+        console.error('Une erreur s\'est produite lors de la récupération du fichier JSON :', error);
+      });
     });
 }
 export function getQuestionnaireJSON() {
