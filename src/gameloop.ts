@@ -1,9 +1,10 @@
+import { Cloud } from "./cloud";
 
 
 const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
 let player = { x: 50, y: 50, width: 50, height: 50, speed: 5 };
-let cloud = new Cloud(ctx);
+//let cloud = new Cloud(ctx);
 
 var numberOfInhabitant: number = 0;
 var globalHealth: number = 100;

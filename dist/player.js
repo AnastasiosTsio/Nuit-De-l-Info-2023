@@ -11,22 +11,22 @@ var Player = /** @class */ (function () {
         this.ctx = ctx;
     }
     Player.prototype.drawPlayer = function () {
-        ctx.fillStyle = "blue";
-        ctx.fillRect(player.x, player.y, player.width, player.height);
+        this.ctx.fillStyle = "blue";
+        this.ctx.fillRect(this.x, this.y, this.width, this.height);
     };
     Player.prototype.movePlayer = function (event) {
         switch (event.key) {
             case "ArrowLeft":
-                player.x -= player.speed;
+                this.x -= this.speed;
                 break;
             case "ArrowRight":
-                player.x += player.speed;
+                this.x += this.speed;
                 break;
             case "ArrowUp":
-                player.y -= player.speed;
+                this.y -= this.speed;
                 break;
             case "ArrowDown":
-                player.y += player.speed;
+                this.y += this.speed;
                 break;
         }
     };

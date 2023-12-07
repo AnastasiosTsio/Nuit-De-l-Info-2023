@@ -14,25 +14,25 @@ export class Player {
     this.speed = 5;
     this.ctx = ctx;
   }
-  
+
   drawPlayer() {
-    ctx.fillStyle = "blue";
-    ctx.fillRect(player.x, player.y, player.width, player.height);
+    this.ctx.fillStyle = "blue";
+    this.ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
   movePlayer(event: any) {
     switch (event.key) {
       case "ArrowLeft":
-        player.x -= player.speed;
+        this.x -= this.speed;
         break;
       case "ArrowRight":
-        player.x += player.speed;
+        this.x += this.speed;
         break;
       case "ArrowUp":
-        player.y -= player.speed;
+        this.y -= this.speed;
         break;
       case "ArrowDown":
-        player.y += player.speed;
+        this.y += this.speed;
         break;
     }
   }

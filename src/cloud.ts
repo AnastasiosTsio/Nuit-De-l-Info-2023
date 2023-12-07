@@ -1,8 +1,8 @@
 
 export class Cloud {
-  ctx: CanvasRenderingContext2D;
+  ctx: any;
   isCloudVisible: boolean;
-  constructor(ctx: CanvasRenderingContext2D) {
+  constructor(ctx: any) {
     this.ctx = ctx;
     this.isCloudVisible = false;
   }

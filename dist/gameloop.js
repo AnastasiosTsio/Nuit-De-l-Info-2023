@@ -1,7 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 var player = { x: 50, y: 50, width: 50, height: 50, speed: 5 };
-var cloud = new Cloud(ctx);
+//let cloud = new Cloud(ctx);
 var numberOfInhabitant = 0;
 var globalHealth = 100;
 var globalMoney = 1000;
