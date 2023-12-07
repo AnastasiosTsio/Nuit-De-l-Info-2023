@@ -3,14 +3,25 @@
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="button.css"
 </head>
 <body>
-    <h1>Template exemple</h1>
-    <p>Juste pour faire joujou</p>
-    <p>Noix Corse</p>
-    <p>Hagrid is more than a character, It's a rigourous debugging method.</p>
-    <button id="myButton">Counter incr</button>
-    <p id="counter">0</p>
+    <div class="main-container">
+        <div class="title">
+            <h1>Draculeon</h1>
+        </div>
+        <div class="settings">
+            <button onclick="changePage('play.html')" class="button-63">Play</button>
+            <button onclick="changePage('settings.html')" class="button-63">Settings</button>
+            <button onclick="changePage('credits.html')" class="button-63">Credits</button>
+        </div>
+    </div>
+    
+    <audio autoplay loop>
+        <source src="audio/Give.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
     <script src="dist/index.js"></script>
+    <script src="dist/explosion.js"></script>
 </body>
 </html>
