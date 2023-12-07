@@ -3,19 +3,50 @@ var fs = require('fs');
 // Charger le contenu du fichier JSON externe
 var questionnaireJSON = JSON.parse(fs.readFileSync('../Questionnaire.json', 'utf8'));
 // Définir une fonction pour récupérer la première question
-function getFirstQuestion(jsonData) {
+function getQuestionByIndex(jsonData, index) {
     if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
-        return jsonData.Questionnaire[0].question;
+        return jsonData.Questionnaire[index].question;
+    }
+    else {
+        return undefined;
+    }
+}
+function getEffectByIndexOui(jsonData, index) {
+    if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
+        return jsonData.Questionnaire[index].effects.oui;
+    }
+    else {
+        return undefined;
+    }
+}
+function getEffectByIndexNon(jsonData, index) {
+    if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
+        return jsonData.Questionnaire[index].effects.non;
+    }
+    else {
+        return undefined;
+    }
+}
+function getEffectByIndexJsp(jsonData, index) {
+    if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
+        return jsonData.Questionnaire[index].effects.jsp;
     }
     else {
         return undefined;
     }
 }
 // Utiliser la fonction pour obtenir la première question
-var firstQuestion = getFirstQuestion(questionnaireJSON);
+var firstQuestion = getQuestionByIndex(questionnaireJSON, 1);
+var firstEffectOui = getEffectByIndexOui(questionnaireJSON, 0);
+var firstEffectNon = getEffectByIndexNon(questionnaireJSON, 1);
+var firstEffectJsp = getEffectByIndexJsp(questionnaireJSON, 1);
+// document.getElementById("counter").innerText = firstQuestion;
 // Afficher la première question
 if (firstQuestion !== undefined) {
     console.log("Première question :", firstQuestion);
+    console.log("Première effet oui:", firstEffectOui);
+    console.log("Première effet non:", firstEffectNon);
+    console.log("Première effet jsp:", firstEffectJsp);
 }
 else {
     console.log("Aucune question trouvée.");
