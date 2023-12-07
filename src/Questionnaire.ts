@@ -3,7 +3,7 @@
 
 var questionnaireJSON: any;
 
-const jsonFile = "/Questionnaire.json";
+const jsonFile = "Questionnaire.json";
 function fetchdata() {
   return fetch(jsonFile)
     .then((response) => response.json())
