@@ -1,6 +1,7 @@
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 var player = { x: 50, y: 50, width: 50, height: 50, speed: 5 };
+var cloud = new Cloud(ctx);
 var numberOfInhabitant = 0;
 var globalHealth = 100;
 var globalMoney = 1000;
@@ -32,6 +33,7 @@ function updateGame() {
     clearCanvas();
     drawPlayer();
     drawDate();
+    //if (cloud.isCloudVisible) cloud.drawCloud();
     requestAnimationFrame(updateGame);
 }
 function movePlayer(event) {
@@ -52,4 +54,5 @@ function movePlayer(event) {
 }
 document.addEventListener("keydown", updateDate);
 document.addEventListener("keydown", movePlayer);
+//document.addEventListener("click", cloud.toggleCloudVisibility);
 updateGame();

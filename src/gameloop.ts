@@ -1,7 +1,9 @@
+
+
 const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
-
 let player = { x: 50, y: 50, width: 50, height: 50, speed: 5 };
+let cloud = new Cloud(ctx);
 
 var numberOfInhabitant: number = 0;
 var globalHealth: number = 100;
@@ -25,8 +27,8 @@ function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function updateDate(event:any) {
-  switch(event.key) {
+function updateDate(event: any) {
+  switch (event.key) {
     case "ArrowLeft":
       date += 10;
       break;
@@ -38,8 +40,8 @@ function updateDate(event:any) {
 function updateGame() {
   clearCanvas();
   drawPlayer();
-
   drawDate();
+  //if (cloud.isCloudVisible) cloud.drawCloud();
   requestAnimationFrame(updateGame);
 }
 
@@ -59,6 +61,8 @@ function movePlayer(event: any) {
       break;
   }
 }
+
 document.addEventListener("keydown", updateDate);
 document.addEventListener("keydown", movePlayer);
+//document.addEventListener("click", cloud.toggleCloudVisibility);
 updateGame();

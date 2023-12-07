@@ -15,16 +15,8 @@ canvas {
 
 .answers{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     margin-top: 20px;
-}
-
-.yesButton{
-    order: 1;
-}
-
-.noButton{
-    order:5;
 }
