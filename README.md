@@ -11,7 +11,7 @@
 
 ## Installation
 ```bash
-npm install -g typescript
+sudo npm install -g typescript
 ```
 ## Protocole de Compilation Typescript
 
