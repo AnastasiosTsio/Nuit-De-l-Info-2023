@@ -1,3 +1,4 @@
+import { getQuestionnaireJSON, getQuestionByIndex, getFirstQuestion } from "./Questionnaire.js";
 export class PeaseantMessage {
     message: string;
     messages: string[];
@@ -5,7 +6,9 @@ export class PeaseantMessage {
 
     constructor() {
         this.id=0;
-        this.message = "Hello, I am a peasant "+this.id.toString()+".";
+        getQuestionnaireJSON().then((jsonData) => {
+            this.message = getQuestionByIndex(jsonData, this.id) + this.id.toString() + ".";
+        });
     }
 
     changeMessage(newMessage: string) {
@@ -15,6 +18,8 @@ export class PeaseantMessage {
     loadMessages() {}
     selectNewMessage() {
         this.id++;
-        this.changeMessage("I am a peasant "+this.id.toString()+".");
+        getQuestionnaireJSON().then((jsonData) => {
+            this.message = getQuestionByIndex(jsonData, this.id) + this.id.toString() + ".";
+        });
     }
 }
