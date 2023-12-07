@@ -1,10 +1,13 @@
+import { PeaseantMessage } from "./peasantmessage.js";
 
 export class Cloud {
   ctx: any;
   isCloudVisible: boolean;
+  message: PeaseantMessage;
   constructor(ctx: any) {
     this.ctx = ctx;
-    this.isCloudVisible = false;
+    this.isCloudVisible = true;
+    this.message = new PeaseantMessage();
   }
 
   drawCloud() {
@@ -12,12 +15,15 @@ export class Cloud {
       this.ctx.fillStyle = "black";
       this.ctx.font = "16px Arial";
       this.ctx.strokeRect(350, 100, 400, 100);
-      this.ctx.fillText("You have a decision to make", 380, 150);
-      this.ctx.fillText("(Right click to close)", 380, 170);
+      this.ctx.fillText(this.message.message, 380, 150);
     }
   }
 
   toggleCloudVisibility(event: any) {
     this.isCloudVisible = !this.isCloudVisible;
+  }
+
+  changeMessage() {
+    this.message.selectNewMessage();
   }
 }

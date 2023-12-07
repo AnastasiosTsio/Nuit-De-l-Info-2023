@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Player = void 0;
 var Player = /** @class */ (function () {
     function Player(ctx) {
         this.x = 50;
@@ -11,8 +8,34 @@ var Player = /** @class */ (function () {
         this.ctx = ctx;
     }
     Player.prototype.drawPlayer = function () {
-        this.ctx.fillStyle = "blue";
-        this.ctx.fillRect(this.x, this.y, this.width, this.height);
+        // Draw the head
+        this.ctx.beginPath();
+        this.ctx.arc(200, 100, 40, 0, 2 * Math.PI);
+        this.ctx.fillStyle = "lightblue";
+        this.ctx.fill();
+        this.ctx.stroke();
+        // Draw the body
+        this.ctx.beginPath();
+        this.ctx.moveTo(200, 140);
+        this.ctx.lineTo(200, 250);
+        this.ctx.strokeStyle = "black";
+        this.ctx.stroke();
+        // Draw the arms
+        this.ctx.beginPath();
+        this.ctx.moveTo(200, 160);
+        this.ctx.lineTo(150, 200);
+        this.ctx.moveTo(200, 160);
+        this.ctx.lineTo(250, 200);
+        this.ctx.strokeStyle = "black";
+        this.ctx.stroke();
+        // Draw the legs
+        this.ctx.beginPath();
+        this.ctx.moveTo(200, 250);
+        this.ctx.lineTo(150, 300);
+        this.ctx.moveTo(200, 250);
+        this.ctx.lineTo(250, 300);
+        this.ctx.strokeStyle = "black";
+        this.ctx.stroke();
     };
     Player.prototype.movePlayer = function (event) {
         switch (event.key) {
@@ -32,4 +55,4 @@ var Player = /** @class */ (function () {
     };
     return Player;
 }());
-exports.Player = Player;
+export { Player };
