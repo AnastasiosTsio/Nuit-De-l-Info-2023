@@ -12,12 +12,8 @@ body {
 
 }
 
-div{
-    border: 1px solid red;
-}
-canvas {
-    border: 1px solid black;
-}
+
+
 
 .answers{
     display: flex;

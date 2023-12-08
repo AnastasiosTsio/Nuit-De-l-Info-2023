@@ -19,7 +19,7 @@ drawCloud() {
     this.ctx.font = "18px Arial";
     const textWidth = this.ctx.measureText(text).width;
 
-    const cloudWidth = textWidth + padding * 2 + 50; // Increase the cloud width
+    const cloudWidth = textWidth + padding * 2  ; // Increase the cloud width
     const cloudHeight = 150; // Increase the cloud height
 
     const canvas: any = document.getElementById("gameCanvas");
