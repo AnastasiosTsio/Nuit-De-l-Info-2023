@@ -1,32 +1,32 @@
+import 
 
-
-function GetConstantEffect() {
-    if (environment < 100 || globalHealth < 100) {
-        var i: number = 100 - (environment + globalHealth);
-        if (numberOfInhabitant > i) {
-            numberOfInhabitant -= i;
+ function GetConstantEffect() {
+    if (Scenario.environment < 100 || Scenario.globalHealth < 100) {
+        var i: number = 100 - (Scenario.environment + Scenario.globalHealth);
+        if (Scenario.numberOfInhabitant > i) {
+            Scenario.numberOfInhabitant -= i;
         }
         else {
-            numberOfInhabitant = 0;
+            Scenario.numberOfInhabitant = 0;
         }
     }
-    else if (numberOfInhabitant > 10000) {
-        frustration += 10;
-        globalMoney += 50;
-        if (environment > 10) {
-            environment -= 10;
+    else if (Scenario.numberOfInhabitant > 10000) {
+        Scenario.frustration += 10;
+        Scenario.globalMoney += 50;
+        if (Scenario.environment > 10) {
+            Scenario.environment -= 10;
         }
         else {
-            environment = 0
+            Scenario.environment = 0
         }
 
     }
-    else if (numberOfInhabitant < 100) {
-        if (development > 10) {
-            development -= 10;
+    else if (Scenario.numberOfInhabitant < 100) {
+        if (Scenario.development > 10) {
+            Scenario.development -= 10;
         }
         else {
-            development = 0
+            Scenario.development = 0
         }
 
     }
