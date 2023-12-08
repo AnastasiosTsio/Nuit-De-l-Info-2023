@@ -26,15 +26,6 @@ function cyclebg() {
     backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
 function updatebg() {
-    console.log(healthBar.health);
-    if (healthBar.health <= 80)
-        cyclebg();
-    if (healthBar.health <= 60)
-        cyclebg();
-    if (healthBar.health <= 40)
-        cyclebg();
-    if (healthBar.health <= 20)
-        cyclebg();
 }
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -42,7 +33,6 @@ function clearCanvas() {
 function updateGame() {
     clearCanvas();
     date.drawDate();
-    console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
     healthBar.checkEnd();
@@ -51,17 +41,13 @@ function updateGame() {
 function makeAChoice(choice) {
     scenario.updateScenario(cloud.getCurrentDilemma(), choice);
     cloud.changeMessage();
-    healthBar.changeHealthBar();
+    console.log(scenario.environnement);
+    healthBar.changeHealthBar(scenario.environnement);
 }
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
-noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
-yesButton.addEventListener("click", function () {
-    healthBar.changeHealthBar();
-    healthBar.updateHealthBar();
-});
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
-yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+noButton.addEventListener("click", date.updateDate.bind(date));
 updateGame();

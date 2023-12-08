@@ -1,6 +1,6 @@
 var Scenario = /** @class */ (function () {
     function Scenario() {
-        this.environnement = 100;
+        this.environnement = 4;
         this.argent = 10;
         this.ressources = 10;
         this.sante = 10;

@@ -13,22 +13,22 @@ var healBar = /** @class */ (function () {
     healBar.prototype.getColorForHealth = function (health) {
         // Example: interpolate between green (100%) and red (0%)
         var green = 255;
-        var red = 255 - Math.round((health / 100) * 255);
+        var red = 255 - Math.round((health / 4) * 255);
         return "rgb(".concat(red, ", ").concat(green, ", 0)");
     };
     // Function to update the health bar based on the health value
-    healBar.prototype.updateHealthBar = function () {
-        this.health = this.scenario.environnement;
+    healBar.prototype.updateHealthBar = function (newHealth) {
         // Ensure health is within the valid range (0 to 100)
-        this.health = Math.max(0, Math.min(this.health, 100));
+        this.health = Math.max(0, Math.min(newHealth, 4));
+        console.log(this.health);
         // Update the width of the health fill element
-        this.healthBar.style.width = this.health + '%';
+        this.healthBar.style.width = (this.health * 100) / 4 + '%';
         // Adjust the color based on the health level (for example, green to red)
         var color = this.getColorForHealth(this.health);
         this.healthBar.style.backgroundColor = color;
     };
-    healBar.prototype.changeHealthBar = function () {
-        this.updateHealthBar();
+    healBar.prototype.changeHealthBar = function (newHealth) {
+        this.updateHealthBar(newHealth);
     };
     return healBar;
 }());
