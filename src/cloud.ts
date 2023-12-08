@@ -1,18 +1,18 @@
-import { PeaseantMessage } from "./peasantmessage.js";
+import { PeasantMessage } from "./peasantmessage.js";
 
 export class Cloud {
   ctx: any;
   isCloudVisible: boolean;
-  message: PeaseantMessage;
+  messanger: PeasantMessage;
   constructor(ctx: any) {
     this.ctx = ctx;
     this.isCloudVisible = true;
-    this.message = new PeaseantMessage();
+    this.messanger = new PeasantMessage();
   }
 
   drawCloud() {
     if (this.isCloudVisible) {
-      const text = this.message.message;
+      const text = this.getCurrentMessage();
           
       this.ctx.font = "18px Arial";
       const textWidth = this.ctx.measureText(text).width;
@@ -33,8 +33,14 @@ export class Cloud {
   toggleCloudVisibility(event: any) {
     this.isCloudVisible = !this.isCloudVisible;
   }
+  private getCurrentMessage(): string {
+    if (this.messanger.message === null) {
+      return "No message available";
+    }
+    return this.messanger.message.question;
+  }
 
   changeMessage() {
-    this.message.selectNewMessage();
+    this.messanger.selectNewMessage();
   }
 }

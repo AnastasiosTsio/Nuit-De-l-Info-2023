@@ -1,13 +1,13 @@
-import { PeaseantMessage } from "./peasantmessage.js";
+import { PeasantMessage } from "./peasantmessage.js";
 var Cloud = /** @class */ (function () {
     function Cloud(ctx) {
         this.ctx = ctx;
         this.isCloudVisible = true;
-        this.message = new PeaseantMessage();
+        this.messanger = new PeasantMessage();
     }
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
-            var text = this.message.message;
+            var text = this.getCurrentMessage();
             this.ctx.font = "18px Arial";
             var textWidth = this.ctx.measureText(text).width;
             var cloudWidth = textWidth + 30; // Adjust as needed
@@ -22,8 +22,14 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.toggleCloudVisibility = function (event) {
         this.isCloudVisible = !this.isCloudVisible;
     };
+    Cloud.prototype.getCurrentMessage = function () {
+        if (this.messanger.message === null) {
+            return "No message available";
+        }
+        return this.messanger.message.question;
+    };
     Cloud.prototype.changeMessage = function () {
-        this.message.selectNewMessage();
+        this.messanger.selectNewMessage();
     };
     return Cloud;
 }());
