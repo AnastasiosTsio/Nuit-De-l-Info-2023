@@ -1,4 +1,4 @@
-import { Scenario } from "./gameloop.ts";
+import { Scenario } from "./gameloop";
  var numberOfInhabitant : number;
  var globalHealth : number;
  var environment : number;
