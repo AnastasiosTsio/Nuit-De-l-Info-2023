@@ -3,6 +3,10 @@ import { gameDate } from "./date.js";
 import { Player } from "./player.js";
 import { Scenario } from "./scenario.js";
 import { healBar } from "./healtbar.js";
+import { richessBar } from "./richessebar.js";
+import { boneurBar } from "./bonheurbar.js";
+import { resourcesBar } from "./ressourcesbar.js";
+
 
 const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
@@ -11,6 +15,9 @@ let player = new Player(ctx);
 let date = new gameDate(1965, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
+let richesseBar = new richessBar(scenario, document.getElementById("richesseFill"));
+let bonheurBar = new boneurBar(scenario, document.getElementById("bonheurFill"));
+let ressourcesBar = new resourcesBar(scenario, document.getElementById("ressourcesFill"));
 
 canvas.width = (window.innerWidth / 10) * 9;
 
@@ -42,12 +49,18 @@ function updateGame() {
   cloud.drawCloud();
   requestAnimationFrame(updateGame);
   healthBar.checkEnd();
+  richesseBar.checkEnd();
+  bonheurBar.checkEnd();
+  ressourcesBar.checkEnd();
 }
 
 function makeAChoice(choice : boolean) {
   scenario.updateScenario(cloud.getCurrentDilemma(), choice);
   cloud.changeMessage();
   healthBar.changeHealthBar();
+  richesseBar.changeRichesseBar();
+  bonheurBar.changeBonheurBar();
+  ressourcesBar.changeRessourcesBar();
 } 
 
 const noButton = document.getElementById("noButton");
@@ -56,6 +69,12 @@ noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", function () {
   healthBar.changeHealthBar();
   healthBar.updateHealthBar();
+  richesseBar.changeRichesseBar();
+  richesseBar.updateRichesseBar();
+  bonheurBar.changeBonheurBar();
+  bonheurBar.updateBonheurBar();
+  ressourcesBar.changeRessourcesBar();
+  ressourcesBar.updateRessourcesBar();
 });
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));

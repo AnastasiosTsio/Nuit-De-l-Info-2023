@@ -32,6 +32,8 @@ canvas {
     height: 30px;
     border: 2px solid #000;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .health-fill {
@@ -41,6 +43,48 @@ canvas {
     transition: width 0.5s; /* Smooth transition when health changes */
 }
 
+.richesse-bar {
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.richesse-fill {
+    height: 100%;
+    background-color: yellow;
+    width: 100%; /* This will be adjusted based on the health percentage */
+    transition: width 0.5s; /* Smooth transition when health changes */
+}
+
+.bonheur-bar {
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.bonheur-fill {
+    height: 100%;
+    background-color: pink;
+    width: 100%; /* This will be adjusted based on the health percentage */
+    transition: width 0.5s; /* Smooth transition when health changes */
+}
+
+
+.ressources-bar {
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.ressources-fill {
+    height: 100%;
+    background-color: blue;
+    width: 100%; /* This will be adjusted based on the health percentage */
+    transition: width 0.5s; /* Smooth transition when health changes */
+}
 
 .noButton {
   font-family: monospace;
