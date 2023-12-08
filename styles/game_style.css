@@ -44,56 +44,56 @@ canvas {
 
 .noButton {
   font-family: monospace;
-  background-color: #ff2f00;
+  background-color: #DF2E38;
   color: #000000;
   border: none;
   border-radius: 8px;
-  width: 100px;
-  height: 45px;
+  width:150px;
+  height: 75px;
   transition: .3s;  
-  font-size: 30px;
+  font-size: 40px;
   
 }
 .noButton:hover {
-  background-color: #fa4700;
+  background-color: #DF2E38;
   color: #f3f7fe;
   cursor: pointer;
 }
 .yesButton{
     font-family: monospace;
-    background-color: #00ff2f;
+    background-color: #5D9C59;
     color: #000000;
     border: none;
     border-radius: 8px;
-    width: 100px;
-    height: 45px;
+    width: 150px;
+    height: 75px;
     transition: .3s;  
-    font-size: 30px;
+    font-size: 40px;
     
     }
 
 .yesButton:hover {
-    background-color: #00fa47;
+    background-color: #5D9C59;
     color: #f3f7fe;
     cursor: pointer;
     }
 
 
-.nextButton{
+.exitButton{
     font-family: monospace;
-    background-color: #004cff;
+    background-color: #3066ED;
     color: #000000;
     border: none;
     border-radius: 8px;
-    width: 100px;
-    height: 45px;
+    width: 150px;
+    height: 75px;
     transition: .3s;  
-    font-size: 30px;
+    font-size: 40px;
     
     }
 
-.nextButton:hover {
-    background-color: #003afa;
+.exitButton:hover {
+    background-color: #3066ED;
     color: #f3f7fe;
     cursor: pointer;
     }

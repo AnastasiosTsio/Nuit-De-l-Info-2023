@@ -12,7 +12,7 @@ var Cloud = /** @class */ (function () {
             var textWidth = this.ctx.measureText(text).width;
             var cloudWidth = textWidth + 30; // Adjust as needed
             var cloudHeight = 100; // Adjust as needed
-            this.ctx.fillStyle = "white";
+            this.ctx.fillStyle = "#C7E8CA";
             var canvas = document.getElementById("gameCanvas");
             this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
             this.ctx.fillStyle = "black";
