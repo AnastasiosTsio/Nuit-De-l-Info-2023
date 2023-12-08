@@ -8,6 +8,9 @@ let cloud = new Cloud(ctx);
 let player = new Player(ctx);
 let date = new gameDate(1965, ctx);
 
+
+canvas.width = (window.innerWidth/10)*9;
+
 var backgroundImageIndex = 0;
 var backgroundImages = ["url('images/paysage-1.png')", "url('images/paysage-2.png')", "url('images/paysage-3.png')", "url('images/paysage-4.png')","url('images/paysage-0.png') "];
 var bg = document.getElementById("changebg");
