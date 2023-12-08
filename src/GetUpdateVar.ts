@@ -1,4 +1,4 @@
-import { Jauge } from "./jauge";
+import { Scenario } from "./gameloop.ts";
  var numberOfInhabitant : number;
  var globalHealth : number;
  var environment : number;
