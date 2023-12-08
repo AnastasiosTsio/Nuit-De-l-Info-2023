@@ -173,17 +173,6 @@
         "explication": "C’est tres extreme et assez peu utile..."
       },
       {
-        "question": "Faut-il emprisonner tous les pollueurs ?",
-        "oui": {
-          "environnement": 1,
-          "frustration": 3,
-          "habitants": -1
-        },
-        "non": null,
-        "reponse": "non",
-        "explication": "C’est tres extreme et assez peu utile..."
-      },
-      {
         "question": "Faut-il financer un système de recyclage",
         "oui": {
           "environnement": 1,
