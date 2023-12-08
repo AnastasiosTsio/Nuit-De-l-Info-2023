@@ -12,19 +12,19 @@ export class Cloud {
 
   drawCloud() {
     if (this.isCloudVisible) {
-        const text = this.message.message;
-        
-        this.ctx.font = "16px Arial";
-        const textWidth = this.ctx.measureText(text).width;
+      const text = this.message.message;
+          
+      this.ctx.font = "18px Arial";
+      const textWidth = this.ctx.measureText(text).width;
 
-        const cloudWidth = textWidth + 30; // Adjust as needed
-        const cloudHeight = 100; // Adjust as needed
+      const cloudWidth = textWidth + 30; // Adjust as needed
+      const cloudHeight = 100; // Adjust as needed
 
-        this.ctx.fillStyle = "white";
-        this.ctx.fillRect(750, 50, cloudWidth, cloudHeight);
-
-        this.ctx.fillStyle = "black";
-        this.ctx.fillText(text, 760, 100);
+      this.ctx.fillStyle = "white";
+      const canvas: any = document.getElementById("gameCanvas");
+      this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
+      this.ctx.fillStyle = "black";
+      this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
     }
   }
 

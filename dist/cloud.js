@@ -8,14 +8,15 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
             var text = this.message.message;
-            this.ctx.font = "16px Arial";
+            this.ctx.font = "18px Arial";
             var textWidth = this.ctx.measureText(text).width;
             var cloudWidth = textWidth + 30; // Adjust as needed
             var cloudHeight = 100; // Adjust as needed
             this.ctx.fillStyle = "white";
-            this.ctx.fillRect(750, 50, cloudWidth, cloudHeight);
+            var canvas = document.getElementById("gameCanvas");
+            this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
             this.ctx.fillStyle = "black";
-            this.ctx.fillText(text, 760, 100);
+            this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
         }
     };
     Cloud.prototype.toggleCloudVisibility = function (event) {
