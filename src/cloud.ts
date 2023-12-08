@@ -1,4 +1,5 @@
 import { PeasantMessage } from "./peasantmessage.js";
+import { Question } from "./question.js";
 
 export class Cloud {
   ctx: any;
@@ -30,6 +31,9 @@ export class Cloud {
 
   toggleCloudVisibility(event: any) {
     this.isCloudVisible = !this.isCloudVisible;
+  }
+  public getCurrentDilemma() : Question {
+    return this.messanger.message;
   }
   private getCurrentMessage(): string {
     if (this.messanger.message === null) {

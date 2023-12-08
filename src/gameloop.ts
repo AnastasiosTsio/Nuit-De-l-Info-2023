@@ -12,7 +12,7 @@ let date = new gameDate(1965, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
 
-canvas.width = (window.innerWidth/10)*9;
+canvas.width = (window.innerWidth / 10) * 9;
 
 var backgroundImageIndex = 0;
 var backgroundImages = [
@@ -44,19 +44,21 @@ function updateGame() {
   requestAnimationFrame(updateGame);
 }
 
-
+function makeAChoice(choice : boolean) {
+  scenario.updateScenario(cloud.getCurrentDilemma(), choice);
+  cloud.changeMessage();
+  healthBar.changeHealthBar();
+} 
 
 const noButton = document.getElementById("noButton");
 const yesButton = document.getElementById("yesButton");
 noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
-yesButton.addEventListener("click", function (){
+yesButton.addEventListener("click", function () {
   healthBar.changeHealthBar();
   healthBar.updateHealthBar();
 });
 yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 noButton.addEventListener("click", date.updateDate.bind(date));
 yesButton.addEventListener("click", date.updateDate.bind(date));
-
-  
 
 updateGame();

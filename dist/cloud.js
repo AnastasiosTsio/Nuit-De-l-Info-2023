@@ -22,6 +22,9 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.toggleCloudVisibility = function (event) {
         this.isCloudVisible = !this.isCloudVisible;
     };
+    Cloud.prototype.getCurrentDilemma = function () {
+        return this.messanger.message;
+    };
     Cloud.prototype.getCurrentMessage = function () {
         if (this.messanger.message === null) {
             return "No message available";

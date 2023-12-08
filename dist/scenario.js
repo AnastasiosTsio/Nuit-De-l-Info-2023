@@ -1,30 +1,28 @@
 var Scenario = /** @class */ (function () {
     function Scenario() {
-        this.numberOfInhabitant = 1000,
-            this.globalHealth = 100,
-            this.globalMoney = 1000,
-            this.averageTemperature = 27;
+        this.environnement = 10;
+        this.argent = 10;
+        this.ressources = 10;
+        this.sante = 10;
+        this.frustration = 10;
+        this.developpement = 10;
     }
-    Scenario.prototype.updateScenario = function (context) {
-        var toBeAdded = this.parsingContext(context);
-        this.numberOfInhabitant += toBeAdded;
-        this.globalHealth += toBeAdded;
-        this.globalMoney += toBeAdded;
-        this.averageTemperature += toBeAdded;
-    };
-    Scenario.prototype.parsingContext = function (context) {
-        var res = 0;
-        switch (context) {
-            case 1:
-                res = 5;
-                break;
-            case 2:
-                res = 10;
-                break;
-            default:
-                res = 0;
-                break;
-                return res;
+    Scenario.prototype.updateScenario = function (question, reponse) {
+        if (reponse) {
+            this.environnement += question.oui.environnement;
+            this.argent += question.oui.argent;
+            this.ressources += question.oui.ressources;
+            this.sante += question.oui.sante;
+            this.frustration += question.oui.frustration;
+            this.developpement += question.oui.developpement;
+        }
+        else {
+            this.environnement += question.non.environnement;
+            this.argent += question.non.argent;
+            this.ressources += question.non.ressources;
+            this.sante += question.non.sante;
+            this.frustration += question.non.frustration;
+            this.developpement += question.non.developpement;
         }
     };
     return Scenario;

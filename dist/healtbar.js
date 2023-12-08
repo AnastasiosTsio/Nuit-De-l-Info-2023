@@ -1,6 +1,6 @@
 var healBar = /** @class */ (function () {
     function healBar(scenario, healthBar) {
-        this.health = scenario.globalHealth;
+        this.health = scenario.environnement;
         this.healthBar = healthBar;
     }
     // Function to get color based on health level
@@ -21,7 +21,6 @@ var healBar = /** @class */ (function () {
         this.healthBar.style.backgroundColor = color;
     };
     healBar.prototype.changeHealthBar = function () {
-        this.health = this.health - 10;
         this.updateHealthBar();
     };
     return healBar;

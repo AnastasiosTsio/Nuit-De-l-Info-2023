@@ -1,9 +1,12 @@
+import { Scenario } from "./scenario";
+
 export class healBar {
     health: number;
     healthBar: any;
+    scenario: Scenario;
 
     constructor(scenario: any, healthBar: any) {
-        this.health = scenario.globalHealth;
+        this.health = scenario.environnement;
         this.healthBar = healthBar;
     }
 
@@ -28,7 +31,6 @@ export class healBar {
   }
 
   changeHealthBar() {
-      this.health = this.health - 10;
       this.updateHealthBar();
   }
 }

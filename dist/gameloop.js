@@ -37,6 +37,11 @@ function updateGame() {
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
 }
+function makeAChoice(choice) {
+    scenario.updateScenario(cloud.getCurrentDilemma(), choice);
+    cloud.changeMessage();
+    healthBar.changeHealthBar();
+}
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
 noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
