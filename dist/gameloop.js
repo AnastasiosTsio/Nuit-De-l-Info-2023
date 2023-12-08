@@ -33,6 +33,7 @@ function clearCanvas() {
 function updateGame() {
     clearCanvas();
     date.drawDate();
+    console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
     healthBar.checkEnd();
