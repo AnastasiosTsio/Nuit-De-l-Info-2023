@@ -12,9 +12,9 @@ export class Cloud {
   }
   afterFirst: boolean = false;
   drawCloud() {
-  if (this.isCloudVisible && this.afterFirst) {
+  if (this.isCloudVisible) {
     const text = this.getCurrentMessage();
-    if(text === "No message available") {
+    if(text === "No message available" && this.afterFirst) {
       changePage('fin.html')
     }
     const padding = 15;
