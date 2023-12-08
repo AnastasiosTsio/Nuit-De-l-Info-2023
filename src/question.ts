@@ -43,7 +43,7 @@ export class Question {
 
     // Assign properties from JSONData
     this.question = JSONData.question ?? "";
-    this.reponse = JSONData.reponse ?? null;
+    this.reponse = JSONData.reponse == "oui" ? true : false;
     this.explication = JSONData.explication ?? "";
     // Assign values to oui and non from JSONData if available
     if (JSONData.oui) {

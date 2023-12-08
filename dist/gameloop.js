@@ -1,12 +1,12 @@
 import { Cloud } from "./cloud.js";
 import { gameDate } from "./date.js";
-import { Player } from "./player.js";
 import { Scenario } from "./scenario.js";
 import { healBar } from "./healtbar.js";
+import { Expert } from "./expert.js";
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 var cloud = new Cloud(ctx);
-var player = new Player(ctx);
+var expert = new Expert(ctx);
 var date = new gameDate(1965, ctx);
 var scenario = new Scenario();
 var healthBar = new healBar(scenario, document.getElementById("healthFill"));
@@ -32,12 +32,15 @@ function updateGame() {
     clearCanvas();
     date.drawDate();
     console.log(cloud.isCloudVisible);
+    expert.drawExpert();
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
     healthBar.checkEnd();
 }
 function makeAChoice(choice) {
     scenario.updateScenario(cloud.getCurrentDilemma(), choice);
+    expert.setVisible();
+    expert.getCurrentExpertAdvice(cloud.getCurrentDilemma(), choice);
     cloud.changeMessage();
     healthBar.changeHealthBar();
 }
