@@ -20,17 +20,17 @@ export class healBar {
   getColorForHealth(health: number) {
     // Example: interpolate between green (100%) and red (0%)
     const green = 255;
-    const red = 255 - Math.round((health / 10000000) * 255);
+    const red = 255 - Math.round((health / 4.5) * 255);
     return `rgb(${red}, ${green}, 0)`;
 }
   // Function to update the health bar based on the health value
   updateHealthBar(newHealth: number) {
       // Ensure health is within the valid range (0 to 100)
-      this.health = Math.max(0, Math.min(newHealth, 10000000));
+      this.health = Math.max(0.5, Math.min(newHealth, 4.5));
       console.log(this.health);
       // Update the width of the health fill element
-      this.healthBar.style.width = this.health + '%';
-
+      this.healthBar.style.width = (this.health/4.5)*100 + '%';
+      this.healthBar.textContent = this.health.toFixed(3).toString()+"°C";
       // Adjust the color based on the health level (for example, green to red)
       const color = this.getColorForHealth(this.health);
       this.healthBar.style.backgroundColor = color;
