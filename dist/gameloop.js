@@ -21,7 +21,6 @@ var backgroundImages = [
 ];
 var bg = document.getElementById("changebg");
 function cyclebg() {
-    console.log("cyclebg");
     document.body.style.backgroundImage = backgroundImages[backgroundImageIndex];
     backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }

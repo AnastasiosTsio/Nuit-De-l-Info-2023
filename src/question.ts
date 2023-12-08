@@ -4,7 +4,7 @@ interface OuiNonInterface {
   ressources: number;
   sante: number;
   frustration: number;
-  developpement: number;
+  habitants: number;
   [key: string]: number;
 }
 
@@ -22,7 +22,7 @@ export class Question {
       ressources: 0,
       sante: 0,
       frustration: 0,
-      developpement: 0,
+      habitants: 0,
     };
     this.non = {
       environnement: 0,
@@ -30,7 +30,7 @@ export class Question {
       ressources: 0,
       sante: 0,
       frustration: 0,
-      developpement: 0,
+      habitants: 0,
     };
 
     // Check if JSONData is null or undefined

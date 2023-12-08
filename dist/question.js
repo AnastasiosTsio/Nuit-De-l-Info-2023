@@ -8,7 +8,7 @@ var Question = /** @class */ (function () {
             ressources: 0,
             sante: 0,
             frustration: 0,
-            developpement: 0,
+            habitants: 0,
         };
         this.non = {
             environnement: 0,
@@ -16,7 +16,7 @@ var Question = /** @class */ (function () {
             ressources: 0,
             sante: 0,
             frustration: 0,
-            developpement: 0,
+            habitants: 0,
         };
         // Check if JSONData is null or undefined
         if (!JSONData) {
@@ -44,7 +44,7 @@ var Question = /** @class */ (function () {
                 }
             });
         }
-        console.log(this);
+        //console.log(this);
     }
     return Question;
 }());
