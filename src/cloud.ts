@@ -20,11 +20,13 @@ export class Cloud {
       const cloudWidth = textWidth + 30; // Adjust as needed
       const cloudHeight = 100; // Adjust as needed
 
-      this.ctx.fillStyle = "white";
-      const canvas: any = document.getElementById("gameCanvas");
+      this.ctx.fillStyle = "#C7E8CA";
+      const canvas: any = document.getElementById("gameCanvas");     
       this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
       this.ctx.fillStyle = "black";
       this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
+
+
     }
   }
 

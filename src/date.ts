@@ -15,7 +15,7 @@ export class gameDate {
         this.ctx.fillStyle = "black";
         this.ctx.font = "50px Boulder";
         const canvas: any = document.getElementById("gameCanvas");
-        this.ctx.fillText(this.date.toString(), canvas.width - 105, 40);
+        this.ctx.fillText(this.date.toString(), canvas.width - 115, 40);
       }
 
     updateDate(event: any) {
