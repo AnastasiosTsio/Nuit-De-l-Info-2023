@@ -2,7 +2,7 @@
 // const fs = require('fs');
 
 
-const jsonFile = '../Questionnaire.json';
+const jsonFile = 'Questionnaire.json';
 export function fetchdata() {
   return fetch(jsonFile)
     .then(response => response.json())
@@ -14,39 +14,45 @@ export function fetchdata() {
 
 
 // Définir une fonction pour récupérer la première question
-export function getQuestionByIndex(jsonData: any, index: number): string | undefined {
+export function getQuestionByIndex(
+  jsonData: any,
+  index: number
+): string | undefined {
   if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
-      return jsonData.Questionnaire[index].question;
+    return jsonData.Questionnaire[index].question;
   } else {
-      return undefined;
+    return undefined;
   }
 }
 
 function getEffectByIndexOui(jsonData: any, index: number): string | undefined {
   if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
-      return jsonData.Questionnaire[index].effects.oui;
+    return jsonData.Questionnaire[index].effects.oui;
   } else {
-      return undefined;
+    return undefined;
   }
 }
 
 function getEffectByIndexNon(jsonData: any, index: number): string | undefined {
   if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
-      return jsonData.Questionnaire[index].effects.non;
+    return jsonData.Questionnaire[index].effects.non;
   } else {
-      return undefined;
+    return undefined;
   }
 }
 
 function getEffectByIndexJsp(jsonData: any, index: number): string | undefined {
   if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
-      return jsonData.Questionnaire[index].effects.jsp;
+    return jsonData.Questionnaire[index].effects.jsp;
   } else {
-      return undefined;
+    return undefined;
   }
 }
 
-export function getReponseByIndex(jsonData: any, index: number): string | undefined {
+export function getReponseByIndex(
+  jsonData: any,
+  index: number
+): string | undefined {
   if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
     return jsonData.Questionnaire[index].reponse;
   } else {
@@ -54,15 +60,16 @@ export function getReponseByIndex(jsonData: any, index: number): string | undefi
   }
 }
 
-export function getExplicationByIndex(jsonData: any, index: number): string | undefined {
+export function getExplicationByIndex(
+  jsonData: any,
+  index: number
+): string | undefined {
   if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
     return jsonData.Questionnaire[index].explication;
   } else {
     return undefined;
   }
 }
-
-
 
 // Utiliser la fonction pour obtenir la première question
 // getQuestionnaireJSON().then((jsonData:any) => {
@@ -77,10 +84,9 @@ export function getExplicationByIndex(jsonData: any, index: number): string | un
 //   console.log("First Effect Jsp:", firstEffectJsp);
 // });
 
-
 export function getFirstQuestion(jsonData: any) {
-    return getQuestionByIndex(jsonData, 0);
-  }
+  return getQuestionByIndex(jsonData, 0);
+}
 
 export function getQuestionRandom(jsonData:any) {
     var random = Math.floor(Math.random() * 5);

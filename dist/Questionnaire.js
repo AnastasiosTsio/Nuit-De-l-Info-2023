@@ -1,6 +1,6 @@
 // Importer le module fs pour la gestion des fichiers
 // const fs = require('fs');
-var jsonFile = '../Questionnaire.json';
+var jsonFile = 'Questionnaire.json';
 export function fetchdata() {
     return fetch(jsonFile)
         .then(function (response) { return response.json(); })

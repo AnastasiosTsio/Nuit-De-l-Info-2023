@@ -12,9 +12,9 @@ export class PeaseantMessage {
 
     private async initialize() {
         try {
-          var elements = await fetchdata();
+          var elements : any = await fetchdata();
           console.log(elements);
-          this.messages = elements.map(element => element.question);
+          this.messages = elements.map((element: { question: any; }) => element.question);
           this.message = this.removeRandomElement(this.messages) || "";
           console.log(this.messages);
         } catch (error) {
