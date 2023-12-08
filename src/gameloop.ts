@@ -25,13 +25,18 @@ var backgroundImages = [
 ];
 
 
-function cyclebg() {
+function cyclebg(index: number){
   console.log("cyclebg");
-  document.body.style.backgroundImage = backgroundImages[backgroundImageIndex];
+  document.body.style.backgroundImage = backgroundImages[index];
   backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
 
 function updatebg() {
+  console.log("aled"+scenario.etat_environnement);
+  if(scenario.etat_environnement > 0.75) {cyclebg(1); console.log("cyclebg");}
+  if(scenario.etat_environnement > 1.25) cyclebg(2);
+  if(scenario.etat_environnement > 1.75) cyclebg(3);
+  if(scenario.etat_environnement > 2) cyclebg(4);  
 }
 
 function clearCanvas() {
