@@ -51,10 +51,9 @@ var PeaseantMessage = /** @class */ (function () {
                         return [4 /*yield*/, fetchdata()];
                     case 1:
                         elements = _a.sent();
-                        console.log(elements);
+                        //console.log(elements);
                         this.messages = elements.map(function (element) { return element.question; });
                         this.message = this.removeRandomElement(this.messages) || "";
-                        console.log(this.messages);
                         return [3 /*break*/, 3];
                     case 2:
                         error_1 = _a.sent();
@@ -78,7 +77,7 @@ var PeaseantMessage = /** @class */ (function () {
         }
         var randomIndex = Math.floor(Math.random() * arr.length);
         var removedElement = arr.splice(randomIndex, 1)[0];
-        console.log(arr);
+        //console.log(arr);
         return removedElement;
     };
     return PeaseantMessage;

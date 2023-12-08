@@ -13,10 +13,10 @@ export class PeaseantMessage {
     private async initialize() {
         try {
           var elements : any = await fetchdata();
-          console.log(elements);
+          //console.log(elements);
           this.messages = elements.map((element: { question: any; }) => element.question);
           this.message = this.removeRandomElement(this.messages) || "";
-          console.log(this.messages);
+          //console.log(this.messages);
         } catch (error) {
           console.error('An error occurred during initialization:', error);
         }
@@ -38,7 +38,7 @@ export class PeaseantMessage {
     
         const randomIndex = Math.floor(Math.random() * arr.length);
         const removedElement = arr.splice(randomIndex, 1)[0];
-        console.log(arr);
+        //console.log(arr);
         return removedElement;
     }
 

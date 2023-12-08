@@ -1,13 +1,16 @@
 import { Cloud } from "./cloud.js";
 import { gameDate } from "./date.js";
 import { Player } from "./player.js";
+import { Scenario } from "./scenario.js";
+import { healBar } from "./healtbar.js";
 
 const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
 let cloud = new Cloud(ctx);
 let player = new Player(ctx);
 let date = new gameDate(1965, ctx);
-
+let scenario = new Scenario();
+let healthBar = new healBar(scenario, document.getElementById("healthFill"));
 
 canvas.width = (window.innerWidth/10)*9;
 
@@ -35,9 +38,18 @@ function updateGame() {
   requestAnimationFrame(updateGame);
 }
 
+
+
 const noButton = document.getElementById("noButton");
 const yesButton = document.getElementById("yesButton");
 noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
+yesButton.addEventListener("click", function (){
+  healthBar.changeHealthBar();
+  healthBar.updateHealthBar();
+});
 noButton.addEventListener("click", date.updateDate.bind(date));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+
+  
+
 updateGame();
