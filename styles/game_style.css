@@ -28,3 +28,60 @@ canvas {
     flex-direction: row;
     margin-top: 20px;
 }
+
+
+.noButton {
+  font-family: monospace;
+  background-color: #ff2f00;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: .3s;  
+  font-size: 30px;
+  
+}
+.noButton:hover {
+  background-color: #fa4700;
+  color: #f3f7fe;
+  cursor: pointer;
+}
+.yesButton{
+    font-family: monospace;
+    background-color: #00ff2f;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;  
+    font-size: 30px;
+    
+    }
+
+.yesButton:hover {
+    background-color: #00fa47;
+    color: #f3f7fe;
+    cursor: pointer;
+    }
+
+
+.nextButton{
+    font-family: monospace;
+    background-color: #004cff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;  
+    font-size: 30px;
+    
+    }
+
+.nextButton:hover {
+    background-color: #003afa;
+    color: #f3f7fe;
+    cursor: pointer;
+    }

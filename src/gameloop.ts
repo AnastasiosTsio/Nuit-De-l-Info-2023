@@ -8,7 +8,6 @@ let cloud = new Cloud(ctx);
 let player = new Player(ctx);
 let date = new gameDate(1965, ctx);
 
-
 canvas.width = (window.innerWidth/10)*9;
 
 var backgroundImageIndex = 0;
