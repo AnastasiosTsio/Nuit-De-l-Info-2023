@@ -12,8 +12,6 @@ body {
 
 }
 
-
-
 div{
     border: 1px solid red;
 }
@@ -27,6 +25,20 @@ canvas {
     align-items: center;
     flex-direction: row;
     margin-top: 20px;
+}
+
+.health-bar {
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.health-fill {
+    height: 100%;
+    background-color: green;
+    width: 100%; /* This will be adjusted based on the health percentage */
+    transition: width 0.5s; /* Smooth transition when health changes */
 }
 
 

@@ -5,15 +5,11 @@ export class Scenario{
     averageTemperature: number;
 
     constructor(
-        numberOfInhabitant: number = 1000,
-        globalHealth: number = 100,
-        globalMoney: number = 1000,
-        averageTemperature: number = 27
     ) {
-        this.numberOfInhabitant = numberOfInhabitant;
-        this.globalHealth = globalHealth;
-        this.globalMoney = globalMoney;
-        this.averageTemperature = averageTemperature;
+        this.numberOfInhabitant = 1000,
+        this.globalHealth = 100,
+        this.globalMoney = 1000,
+        this.averageTemperature= 27
     }
 
     updateScenario(context:number) {
