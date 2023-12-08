@@ -12,7 +12,7 @@ export class Cloud {
 
   drawCloud() {
     if (this.isCloudVisible) {
-      const text = this.message.message;
+      const text = this.getCurrentMessage();
           
       this.ctx.font = "18px Arial";
       const textWidth = this.ctx.measureText(text).width;

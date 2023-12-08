@@ -6,13 +6,6 @@ var Cloud = /** @class */ (function () {
         this.messanger = new PeasantMessage();
     }
     Cloud.prototype.drawCloud = function () {
-        console.log("drawCloud");
-        this.ctx.fillStyle = "white";
-        this.ctx.font = "16px Arial";
-        this.ctx.fillRect(350, 100, 400, 100);
-        this.ctx.fillStyle = "black";
-        console.log(this.getCurrentMessage().toString());
-        this.ctx.fillText(this.getCurrentMessage(), 380, 150);
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
             this.ctx.font = "18px Arial";
