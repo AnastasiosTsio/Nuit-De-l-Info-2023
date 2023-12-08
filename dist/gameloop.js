@@ -21,6 +21,7 @@ var backgroundImages = [
 ];
 var bg = document.getElementById("changebg");
 function cyclebg() {
+    console.log("cyclebg");
     document.body.style.backgroundImage = backgroundImages[backgroundImageIndex];
     backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
@@ -31,6 +32,7 @@ function clearCanvas() {
 function updateGame() {
     clearCanvas();
     date.drawDate();
+    console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
     healthBar.checkEnd();
@@ -42,13 +44,8 @@ function makeAChoice(choice) {
 }
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
-noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
-yesButton.addEventListener("click", function () {
-    healthBar.changeHealthBar();
-    healthBar.updateHealthBar();
-});
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
-yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+noButton.addEventListener("click", date.updateDate.bind(date));
 updateGame();

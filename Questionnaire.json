@@ -25,9 +25,7 @@
       {
         "question": "Viser une augmentation de 3° maximum pour éviter des séquelles?",
         "oui": {
-          "environnement": null,
-          "argent": null,
-          "ressources": null
+          "environnement": 0
         },
         "non": null,
         "reponse": "informatif",
@@ -35,13 +33,13 @@
       },
       {
         "question": "Investir sur les nouvelles technologies pour résoudre le réchauffement climatique?",
-        "oui": null,
-        "non": {
+        "oui": {
           "argent": -1,
           "developpement": 2,
           "frustration": -1,
           "ressources": -1
         },
+        "non": null,
         "reponse": "non",
         "explication": "Les progrès technologiques pourront peut-être dans un futur lointain nous permettre de coloniser de nouvelles planètes, comme solution de sauvegarde de l’espèce humaine… Mais aucune découverte scientifique majeure n’a pu influer sur le climat."
       },

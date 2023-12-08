@@ -20,10 +20,12 @@ export class PeasantMessage {
       console.log("FETCHED DATA");
       console.log(elements);
       this.messages = elements.map((element) => new Question(element)); // Create Question objects
+      console.log(this.messages);
       this.selectNewMessage();
     } catch (error) {
       console.error("An error occurred during initialization:", error);
     }
+    
   }
 
   // Select a new random message
