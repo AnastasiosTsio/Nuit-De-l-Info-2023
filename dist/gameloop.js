@@ -43,13 +43,8 @@ function makeAChoice(choice) {
 }
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
-noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
-yesButton.addEventListener("click", function () {
-    healthBar.changeHealthBar();
-    healthBar.updateHealthBar();
-});
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
-yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+noButton.addEventListener("click", date.updateDate.bind(date));
 updateGame();

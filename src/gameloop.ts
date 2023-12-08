@@ -53,14 +53,9 @@ function makeAChoice(choice : boolean) {
 
 const noButton = document.getElementById("noButton");
 const yesButton = document.getElementById("yesButton");
-noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
-yesButton.addEventListener("click", function () {
-  healthBar.changeHealthBar();
-  healthBar.updateHealthBar();
-});
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
-yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+noButton.addEventListener("click", date.updateDate.bind(date));
 
 updateGame();
