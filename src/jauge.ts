@@ -5,6 +5,8 @@ export class Jauge{
    EtGlobalMoney : number;
    EtHappiness : number;
    EtRessources : number;
+
+   
 }
 
 

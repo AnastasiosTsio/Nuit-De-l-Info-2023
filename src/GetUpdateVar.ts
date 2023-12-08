@@ -12,12 +12,12 @@ import { Jauge } from "./jauge";
  function GetUpdateVar () {
     nbhabbeg=5;
     a=2;
-    Jauge.EtNumberOfInhabitant=EtNumberOfInhabitant*((a+numberOfInhabitant)/a)*((5+ETglobalHealth)/5);
-    EtGlobalMoney=EtGlobalMoney*(numberOfInhabitant/nbhabbeg)*((a*globalMoney)/a);
-    EtEnvironment=EtEnvironment*(1+(((30-environment)/10)*(numberOfInhabitant/nbhabbeg)));
-    EtHappiness=EtHappiness*((10-frustration)/10)*((5+ETglobalHealth)/5);
-    EtRessources=EtRessources-(numberOfInhabitant/nbhabbeg)*ressources*0.1;
-    EtglobalHealth=EtglobalHealth*((5+globalHealth)/5)*((6+EtEnvironment)/6)
+    Jauge.EtNumberOfInhabitant=Jauge.EtNumberOfInhabitant*((a+numberOfInhabitant)/a)*((5+Jauge.EtGlobalHealth)/5);
+    Jauge.EtGlobalMoney=Jauge.EtGlobalMoney*(numberOfInhabitant/nbhabbeg)*((a*globalMoney)/a);
+    Jauge.EtEnvironment=Jauge.EtEnvironment*(1+(((30-environment)/10)*(numberOfInhabitant/nbhabbeg)));
+    Jauge.EtHappiness=Jauge.EtHappiness*((10-frustration)/10)*((5+Jauge.EtGlobalHealth)/5);
+    Jauge.EtRessources=Jauge.EtRessources-(numberOfInhabitant/nbhabbeg)*ressources*0.1;
+    Jauge.EtGlobalHealth=Jauge.EtGlobalHealth*((5+globalHealth)/5)*((6+Jauge.EtEnvironment)/6)
 
 
 
