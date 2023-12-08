@@ -25,24 +25,19 @@
     },
     {
       "question": "Viser une augmentation de 3° maximum pour éviter des séquelles?",
-      "oui": {
-        "environnement": null,
-        "argent": null,
-        "ressources": null
-      },
+      "oui": null,
       "non": null,
       "reponse": "informatif",
       "explication": "De grosses séquelles sur l’environnement apparaissent déjà à partir d’une augmentation de 1.5°."
     },
     {
       "question": "Investir sur les nouvelles technologies pour résoudre le réchauffement climatique?",
-      "oui": null,
-      "non": {
+      "oui": {
         "argent": -1,
-        "developpement": 2,
         "frustration": -1,
         "ressources": -1
       },
+      "non": null,
       "reponse": "non",
       "explication": "Les progrès technologiques pourront peut-être dans un futur lointain nous permettre de coloniser de nouvelles planètes, comme solution de sauvegarde de l’espèce humaine… Mais aucune découverte scientifique majeure n’a pu influer sur le climat."
     },
@@ -62,7 +57,6 @@
       "oui": {
         "environnement": 2,
         "argent": -1,
-        "developpement": -1,
         "frustration": 3,
         "ressources": 1
       },
@@ -95,7 +89,6 @@
       "question": "Doit-on interdire l'energie nucleaire ?",
       "oui": {
         "argent":-1,
-        "developpement":-3,
         "frustration":2,
         "ressources":1   
       },
@@ -146,7 +139,6 @@
       "oui": {
         "environnement":1,
         "argent":-1,
-        "developpement":1,
         "frustration":-2
       },
       "non": null,
