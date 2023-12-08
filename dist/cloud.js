@@ -7,11 +7,15 @@ var Cloud = /** @class */ (function () {
     }
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
-            this.ctx.fillStyle = "white";
+            var text = this.message.message;
             this.ctx.font = "16px Arial";
-            this.ctx.fillRect(350, 100, 400, 100);
+            var textWidth = this.ctx.measureText(text).width;
+            var cloudWidth = textWidth + 30; // Adjust as needed
+            var cloudHeight = 100; // Adjust as needed
+            this.ctx.fillStyle = "white";
+            this.ctx.fillRect(750, 50, cloudWidth, cloudHeight);
             this.ctx.fillStyle = "black";
-            this.ctx.fillText(this.message.message, 380, 150);
+            this.ctx.fillText(text, 760, 100);
         }
     };
     Cloud.prototype.toggleCloudVisibility = function (event) {
