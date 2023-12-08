@@ -3,11 +3,12 @@ import { gameDate } from "./date.js";
 import { Player } from "./player.js";
 import { Scenario } from "./scenario.js";
 import { healBar } from "./healtbar.js";
+import { Expert } from "./expert.js";
 
 const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
 let cloud = new Cloud(ctx);
-let player = new Player(ctx);
+let expert = new Expert(ctx);
 let date = new gameDate(1980, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
@@ -45,6 +46,7 @@ function clearCanvas() {
 function updateGame() {
   clearCanvas();
   date.drawDate();
+  expert.drawExpert();
   cloud.drawCloud();
   requestAnimationFrame(updateGame);
   healthBar.checkEnd();
@@ -53,6 +55,8 @@ function updateGame() {
 
 function makeAChoice(choice : boolean) {
   scenario.updateScenario(cloud.getCurrentDilemma(), choice);
+  expert.setVisible();
+  expert.getCurrentExpertAdvice(cloud.getCurrentDilemma(), choice);
   cloud.changeMessage();
   console.log("scnearia etat env "+scenario.etat_environnement);
   healthBar.changeHealthBar(scenario.etat_environnement);

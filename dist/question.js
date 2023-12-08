@@ -1,7 +1,7 @@
 var Question = /** @class */ (function () {
     function Question(JSONData) {
         var _this = this;
-        var _a, _b, _c;
+        var _a, _b;
         this.oui = {
             environnement: 0,
             argent: 0,
@@ -27,8 +27,8 @@ var Question = /** @class */ (function () {
         }
         // Assign properties from JSONData
         this.question = (_a = JSONData.question) !== null && _a !== void 0 ? _a : "";
-        this.reponse = (_b = JSONData.reponse) !== null && _b !== void 0 ? _b : null;
-        this.explication = (_c = JSONData.explication) !== null && _c !== void 0 ? _c : "";
+        this.reponse = JSONData.reponse == "oui" ? true : false;
+        this.explication = (_b = JSONData.explication) !== null && _b !== void 0 ? _b : "";
         // Assign values to oui and non from JSONData if available
         if (JSONData.oui) {
             Object.keys(this.oui).forEach(function (key) {
