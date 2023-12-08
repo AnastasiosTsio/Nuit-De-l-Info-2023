@@ -3,18 +3,19 @@
 <head>
     <title>Royale Cheese</title>
     <link rel="stylesheet" type="text/css" href="styles/game_style.css">
-    <link rel="preload" href="./images/paysage-0.png" as="image">
-    <link rel="preload" href="./images/paysage-1.png" as="image">
-    <link rel="preload" href="./images/paysage-2.png" as="image">
-    <link rel="preload" href="./images/paysage-3.png" as="image">
-    <link rel="preload" href="./images/paysage-4.png" as="image">
+    <link loading="lazy" rel="preload" href="./images/paysage-0.png" as="image">
+    <link loading="lazy" rel="preload" href="./images/paysage-1.png" as="image">
+    <link loading="lazy" rel="preload" href="./images/paysage-2.png" as="image">
+    <link loading="lazy" rel="preload" href="./images/paysage-3.png" as="image">
+    <link loading="lazy" rel="preload" href="./images/paysage-4.png" as="image">
 </head>
 <body>
     <div class="main-container">
-        <canvas id="gameCanvas" width="600" height="400">           
+        <div class="health-bar">
+            <div class="health-fill" id="healthFill"></div>
+        </div>
+        <canvas id="gameCanvas" height="400">           
         </canvas>
-
-
         <div class="answers">
             <button id="noButton" class="noButton">No</button>
             <button id="yesButton" class="yesButton">Yes</button>

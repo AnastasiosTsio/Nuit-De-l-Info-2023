@@ -58,6 +58,9 @@ var PeasantMessage = /** @class */ (function () {
                         console.log(elements);
                         this.messages = elements.map(function (element) { return new Question(element); }); // Create Question objects
                         this.selectNewMessage();
+                        //console.log(elements);
+                        this.messages = elements.map(function (element) { return element.question; });
+                        this.message = this.removeRandomElement(this.messages) || "";
                         return [3 /*break*/, 3];
                     case 2:
                         error_1 = _a.sent();

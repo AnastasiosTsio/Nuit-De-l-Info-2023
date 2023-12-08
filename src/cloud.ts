@@ -11,14 +11,21 @@ export class Cloud {
   }
 
   drawCloud() {
-    console.log("drawCloud");
+    if (this.isCloudVisible) {
+      const text = this.message.message;
+          
+      this.ctx.font = "18px Arial";
+      const textWidth = this.ctx.measureText(text).width;
 
-    this.ctx.fillStyle = "white";
-    this.ctx.font = "16px Arial";
-    this.ctx.fillRect(350, 100, 400, 100);
-    this.ctx.fillStyle = "black";
-    console.log(this.getCurrentMessage().toString());
-    this.ctx.fillText(this.getCurrentMessage(), 380, 150);
+      const cloudWidth = textWidth + 30; // Adjust as needed
+      const cloudHeight = 100; // Adjust as needed
+
+      this.ctx.fillStyle = "white";
+      const canvas: any = document.getElementById("gameCanvas");
+      this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
+      this.ctx.fillStyle = "black";
+      this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
+    }
   }
 
   toggleCloudVisibility(event: any) {

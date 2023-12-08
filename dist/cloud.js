@@ -13,6 +13,18 @@ var Cloud = /** @class */ (function () {
         this.ctx.fillStyle = "black";
         console.log(this.getCurrentMessage().toString());
         this.ctx.fillText(this.getCurrentMessage(), 380, 150);
+        if (this.isCloudVisible) {
+            var text = this.getCurrentMessage();
+            this.ctx.font = "18px Arial";
+            var textWidth = this.ctx.measureText(text).width;
+            var cloudWidth = textWidth + 30; // Adjust as needed
+            var cloudHeight = 100; // Adjust as needed
+            this.ctx.fillStyle = "white";
+            var canvas = document.getElementById("gameCanvas");
+            this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
+            this.ctx.fillStyle = "black";
+            this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
+        }
     };
     Cloud.prototype.toggleCloudVisibility = function (event) {
         this.isCloudVisible = !this.isCloudVisible;
