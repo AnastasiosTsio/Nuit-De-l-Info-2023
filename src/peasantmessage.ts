@@ -1,4 +1,4 @@
-import { getQuestionnaireJSON, getQuestionByIndex, getQuestionRandom, getReponseByIndex } from "./Questionnaire.js";
+import {  getQuestionByIndex, getQuestionRandom, getReponseByIndex,fetchdata } from "./Questionnaire.js";
 export class PeaseantMessage {
     message: string;
     messages: string[];
@@ -6,11 +6,21 @@ export class PeaseantMessage {
 
     constructor() {
         this.id=0;
-        getQuestionnaireJSON().then((jsonData) => {
-            this.message = getQuestionRandom(jsonData) + this.id.toString() + ".";
-        });
-        console.log(this.messages);
+        this.messages = [];
+        this.initialize();
     }
+
+    private async initialize() {
+        try {
+          var elements = await fetchdata();
+          console.log(elements);
+          this.messages = elements.map(element => element.question);
+          this.message = this.removeRandomElement(this.messages) || "";
+          console.log(this.messages);
+        } catch (error) {
+          console.error('An error occurred during initialization:', error);
+        }
+      }
 
     changeMessage(newMessage: string) {
         this.message = newMessage;
@@ -18,10 +28,18 @@ export class PeaseantMessage {
 
     loadMessages() {}
     selectNewMessage() {
-        this.id++;
-        getQuestionnaireJSON().then((jsonData) => {
-            //this.message = getQuestionByIndex(jsonData, this.id) + this.id.toString() + ".";
-            this.message = getQuestionRandom(jsonData) + this.id.toString() + ".";
-        });
+        this.message = this.removeRandomElement(this.messages) || "";
     }
+    
+    removeRandomElement(arr: string[]): string | undefined {
+        if (arr.length === 0) {
+            return undefined; // Return undefined if the array is empty
+        }
+    
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        const removedElement = arr.splice(randomIndex, 1)[0];
+        console.log(arr);
+        return removedElement;
+    }
+
 }

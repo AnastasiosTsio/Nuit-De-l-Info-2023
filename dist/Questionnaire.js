@@ -1,23 +1,12 @@
 // Importer le module fs pour la gestion des fichiers
 // const fs = require('fs');
-var questionnaireJSON;
 var jsonFile = '../Questionnaire.json';
-function fetchdata() {
+export function fetchdata() {
     return fetch(jsonFile)
         .then(function (response) { return response.json(); })
-        .then(function (data) {
-        // Utilisez les données JSON ici
-        questionnaireJSON = data;
-    })
+        .then(function (jsonData) { return jsonData.Questionnaire; })
         .catch(function (error) {
         console.error('Une erreur s\'est produite lors de la récupération du fichier JSON :', error);
-    });
-}
-export function getQuestionnaireJSON() {
-    // Returning a promise to handle asynchronous behavior
-    return fetchdata().then(function () {
-        // Now you can use questionnaireJSON here or call other functions
-        return questionnaireJSON;
     });
 }
 // Définir une fonction pour récupérer la première question
@@ -84,6 +73,6 @@ export function getFirstQuestion(jsonData) {
     return getQuestionByIndex(jsonData, 0);
 }
 export function getQuestionRandom(jsonData) {
-    var random = Math.floor(Math.random() * 6);
+    var random = Math.floor(Math.random() * 5);
     return getQuestionByIndex(jsonData, random);
 }
