@@ -3,6 +3,10 @@ div{
 }
 
 body{
+    background-image: url("../images/paysage-0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 0;
 }
 
