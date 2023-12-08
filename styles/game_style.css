@@ -79,7 +79,7 @@ canvas {
     }
 
 
-.nextButton{
+.exitButton{
     font-family: monospace;
     background-color: #3066ED;
     color: #000000;
@@ -92,7 +92,7 @@ canvas {
     
     }
 
-.nextButton:hover {
+.exitButton:hover {
     background-color: #3066ED;
     color: #f3f7fe;
     cursor: pointer;

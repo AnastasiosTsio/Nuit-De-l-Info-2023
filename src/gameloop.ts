@@ -53,6 +53,7 @@ yesButton.addEventListener("click", function (){
 });
 yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 noButton.addEventListener("click", date.updateDate.bind(date));
+yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
 
   
