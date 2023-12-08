@@ -49,8 +49,8 @@ function updateGame() {
 function makeAChoice(choice : boolean) {
   scenario.updateScenario(cloud.getCurrentDilemma(), choice);
   cloud.changeMessage();
-  console.log(scenario.environnement);
-  healthBar.changeHealthBar(scenario.environnement);
+  console.log("scnearia etat env "+scenario.etat_environnement);
+  healthBar.changeHealthBar(scenario.etat_environnement);
 } 
 
 const noButton = document.getElementById("noButton");

@@ -37,7 +37,7 @@ canvas {
 .health-fill {
     height: 100%;
     background-color: green;
-    width: 100%; /* This will be adjusted based on the health percentage */
+    width: 2%; /* This will be adjusted based on the health percentage */
     transition: width 0.5s; /* Smooth transition when health changes */
 }
 
