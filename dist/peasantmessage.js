@@ -35,13 +35,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { fetchdata } from "./Questionnaire.js";
-var PeaseantMessage = /** @class */ (function () {
-    function PeaseantMessage() {
+import { Question } from "./question.js"; // Import the Question class
+var PeasantMessage = /** @class */ (function () {
+    function PeasantMessage() {
         this.id = 0;
         this.messages = [];
+        this.message = null;
         this.initialize();
     }
-    PeaseantMessage.prototype.initialize = function () {
+    // Initialize the PeasantMessage with data
+    PeasantMessage.prototype.initialize = function () {
         return __awaiter(this, void 0, void 0, function () {
             var elements, error_1;
             return __generator(this, function (_a) {
@@ -51,36 +54,36 @@ var PeaseantMessage = /** @class */ (function () {
                         return [4 /*yield*/, fetchdata()];
                     case 1:
                         elements = _a.sent();
+                        console.log("FETCHED DATA");
                         console.log(elements);
-                        this.messages = elements.map(function (element) { return element.question; });
-                        this.message = this.removeRandomElement(this.messages) || "";
-                        console.log(this.messages);
+                        this.messages = elements.map(function (element) { return new Question(element); }); // Create Question objects
+                        this.selectNewMessage();
                         return [3 /*break*/, 3];
                     case 2:
                         error_1 = _a.sent();
-                        console.error('An error occurred during initialization:', error_1);
+                        console.error("An error occurred during initialization:", error_1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
             });
         });
     };
-    PeaseantMessage.prototype.changeMessage = function (newMessage) {
-        this.message = newMessage;
+    // Select a new random message
+    PeasantMessage.prototype.selectNewMessage = function () {
+        var randomQuestion = this.removeRandomElement(this.messages);
+        //console.log(randomQuestion);
+        this.message = randomQuestion || null;
+        //console.log("IMPORTANT" + this.message);
     };
-    PeaseantMessage.prototype.loadMessages = function () { };
-    PeaseantMessage.prototype.selectNewMessage = function () {
-        this.message = this.removeRandomElement(this.messages) || "";
-    };
-    PeaseantMessage.prototype.removeRandomElement = function (arr) {
+    // Remove a random element from the array and return it
+    PeasantMessage.prototype.removeRandomElement = function (arr) {
         if (arr.length === 0) {
+            console.log("-------------");
             return undefined; // Return undefined if the array is empty
         }
         var randomIndex = Math.floor(Math.random() * arr.length);
-        var removedElement = arr.splice(randomIndex, 1)[0];
-        console.log(arr);
-        return removedElement;
+        return arr.splice(randomIndex, 1)[0];
     };
-    return PeaseantMessage;
+    return PeasantMessage;
 }());
-export { PeaseantMessage };
+export { PeasantMessage };

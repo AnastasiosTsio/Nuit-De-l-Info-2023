@@ -7,7 +7,13 @@ var cloud = new Cloud(ctx);
 var player = new Player(ctx);
 var date = new gameDate(1965, ctx);
 var backgroundImageIndex = 0;
-var backgroundImages = ["url('images/paysage-1.png')", "url('images/paysage-2.png')", "url('images/paysage-3.png')", "url('images/paysage-4.png')", "url('images/paysage-0.png') "];
+var backgroundImages = [
+    "url('images/paysage-1.png')",
+    "url('images/paysage-2.png')",
+    "url('images/paysage-3.png')",
+    "url('images/paysage-4.png')",
+    "url('images/paysage-0.png') ",
+];
 var bg = document.getElementById("changebg");
 function cyclebg() {
     console.log("cyclebg");
@@ -22,13 +28,14 @@ function updateGame() {
     clearCanvas();
     date.drawDate();
     player.drawPlayer();
-    if (cloud.isCloudVisible)
-        cloud.drawCloud();
+    console.log(cloud.isCloudVisible);
+    cloud.drawCloud();
     requestAnimationFrame(updateGame);
 }
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
 noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
+yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 noButton.addEventListener("click", date.updateDate.bind(date));
 yesButton.addEventListener("click", date.updateDate.bind(date));
 updateGame();
