@@ -36,7 +36,6 @@ function updatebg() {
   if(scenario.etat_environnement > 0.75) {cyclebg(1); console.log("cyclebg");}
   if(scenario.etat_environnement > 1.25) cyclebg(2);
   if(scenario.etat_environnement > 1.75) cyclebg(3);
-  if(scenario.etat_environnement > 2) cyclebg(4);  
 }
 
 function clearCanvas() {
@@ -57,6 +56,7 @@ function makeAChoice(choice : boolean) {
   cloud.changeMessage();
   console.log("scnearia etat env "+scenario.etat_environnement);
   healthBar.changeHealthBar(scenario.etat_environnement);
+  cloud.afterFirst = true;
 } 
 
 const noButton = document.getElementById("noButton");

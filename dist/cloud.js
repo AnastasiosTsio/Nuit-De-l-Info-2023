@@ -1,13 +1,17 @@
 import { PeasantMessage } from "./peasantmessage.js";
 var Cloud = /** @class */ (function () {
     function Cloud(ctx) {
+        this.afterFirst = false;
         this.ctx = ctx;
         this.isCloudVisible = true;
         this.messanger = new PeasantMessage();
     }
     Cloud.prototype.drawCloud = function () {
-        if (this.isCloudVisible) {
+        if (this.isCloudVisible && this.afterFirst) {
             var text = this.getCurrentMessage();
+            if (text === "No message available") {
+                changePage('fin.html');
+            }
             var padding = 15;
             this.ctx.font = "18px Arial";
             var textWidth = this.ctx.measureText(text).width;

@@ -35,8 +35,6 @@ function updatebg() {
         cyclebg(2);
     if (scenario.etat_environnement > 1.75)
         cyclebg(3);
-    if (scenario.etat_environnement > 2)
-        cyclebg(4);
 }
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -54,6 +52,7 @@ function makeAChoice(choice) {
     cloud.changeMessage();
     console.log("scnearia etat env " + scenario.etat_environnement);
     healthBar.changeHealthBar(scenario.etat_environnement);
+    cloud.afterFirst = true;
 }
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
