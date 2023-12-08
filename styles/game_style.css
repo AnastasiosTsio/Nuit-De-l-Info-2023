@@ -111,3 +111,10 @@ body {
     top: 10px;
     left: 10px;
 }
+
+.health-bar {
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    transform: translateX(-50%);
+}
