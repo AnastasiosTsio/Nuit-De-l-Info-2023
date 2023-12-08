@@ -48,6 +48,7 @@ yesButton.addEventListener("click", function (){
   healthBar.updateHealthBar();
 });
 noButton.addEventListener("click", date.updateDate.bind(date));
+yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
 
   
