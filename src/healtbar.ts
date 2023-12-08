@@ -1,4 +1,10 @@
 export class healBar {
+  checkEnd() {
+    if (this.health === 0) {
+      alert("Vous avez perdu");
+      changePage('index.html');
+    }
+  }
     health: number;
     healthBar: any;
 

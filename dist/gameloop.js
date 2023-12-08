@@ -36,6 +36,7 @@ function updateGame() {
     console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
+    healthBar.checkEnd();
 }
 var noButton = document.getElementById("noButton");
 var yesButton = document.getElementById("yesButton");
