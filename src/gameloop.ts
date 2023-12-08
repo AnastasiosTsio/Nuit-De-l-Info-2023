@@ -12,7 +12,8 @@ let date = new gameDate(1965, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
 
-canvas.width = (window.innerWidth / 10) * 9;
+canvas.width = window.innerWidth-100;
+canvas.height = window.innerHeight-100 ;
 
 var backgroundImageIndex = 0;
 var backgroundImages = [
@@ -22,7 +23,7 @@ var backgroundImages = [
   "url('images/paysage-4.png')",
   "url('images/paysage-0.png') ",
 ];
-var bg = document.getElementById("changebg");
+
 
 function cyclebg() {
   console.log("cyclebg");
@@ -58,6 +59,7 @@ const yesButton = document.getElementById("yesButton");
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+noButton.addEventListener("click", date.updateDate.bind(date));
 noButton.addEventListener("click", date.updateDate.bind(date));
 
 updateGame();

@@ -10,7 +10,7 @@ var gameDate = /** @class */ (function () {
         this.ctx.fillStyle = "black";
         this.ctx.font = "70px Boulder";
         var canvas = document.getElementById("gameCanvas");
-        this.ctx.fillText(this.date.toString(), canvas.width - 160, 60);
+        this.ctx.fillText(this.date.toString(), canvas.width - 750, 70);
     };
     gameDate.prototype.updateDate = function (event) {
         this.date += 10;

@@ -10,11 +10,12 @@
     <link loading="lazy" rel="preload" href="./images/paysage-4.png" as="image">
 </head>
 <body>
+    
     <div class="main-container">
-        <div class="health-bar">
+        <div class="health-bar" >
             <div class="health-fill" id="healthFill"></div>
         </div>
-        <canvas id="gameCanvas" height="400">           
+        <canvas id="gameCanvas">           
         </canvas>
         <div class="answers">
             <button id="noButton" class="noButton">No</button>
@@ -23,10 +24,7 @@
         </div>
         <button onclick="changePage('index.html')" id="exitButton" class="exitButton">Exit</button>
 
-        <!-- <div class="test bg">
-            <button id="changebg" class="changebg">change</button>
-        </div> -->
-        
+      
     </div>
     <script src="dist/index.js"></script>
     <script type="module" src="./dist/gameloop.js"></script>

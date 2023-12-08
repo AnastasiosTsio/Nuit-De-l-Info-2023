@@ -12,12 +12,8 @@ body {
 
 }
 
-div{
-    border: 1px solid red;
-}
-canvas {
-    border: 1px solid black;
-}
+
+
 
 .answers{
     display: flex;
@@ -100,8 +96,8 @@ canvas {
 
 .answers {
     position: absolute;
-    bottom: 40px; /* Adjust this value to change the vertical position */
-    left: 50%;
+    bottom: 42px; /* Adjust this value to change the vertical position */
+    left: 53%;
     transform: translateX(-50%);
 
 }
@@ -114,4 +110,11 @@ canvas {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.health-bar {
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    transform: translateX(-50%);
 }
