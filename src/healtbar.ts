@@ -25,6 +25,7 @@ export class healBar {
 }
   // Function to update the health bar based on the health value
   updateHealthBar() {
+      this.health = this.scenario.environnement;
       // Ensure health is within the valid range (0 to 100)
       this.health = Math.max(0, Math.min(this.health, 100));
 

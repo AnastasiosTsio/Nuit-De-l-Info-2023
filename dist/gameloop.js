@@ -25,7 +25,17 @@ function cyclebg() {
     document.body.style.backgroundImage = backgroundImages[backgroundImageIndex];
     backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
-bg.addEventListener("click", cyclebg);
+function updatebg() {
+    console.log(healthBar.health);
+    if (healthBar.health <= 80)
+        cyclebg();
+    if (healthBar.health <= 60)
+        cyclebg();
+    if (healthBar.health <= 40)
+        cyclebg();
+    if (healthBar.health <= 20)
+        cyclebg();
+}
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
@@ -36,6 +46,7 @@ function updateGame() {
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
     healthBar.checkEnd();
+    updatebg();
 }
 function makeAChoice(choice) {
     scenario.updateScenario(cloud.getCurrentDilemma(), choice);

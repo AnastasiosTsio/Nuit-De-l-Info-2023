@@ -9,7 +9,7 @@ export class Scenario {
   developpement: number;
 
   constructor() {
-    this.environnement = 10;
+    this.environnement = 100;
     this.argent = 10;
     this.ressources = 10;
     this.sante = 10;

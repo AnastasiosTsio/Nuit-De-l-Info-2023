@@ -18,6 +18,7 @@ var healBar = /** @class */ (function () {
     };
     // Function to update the health bar based on the health value
     healBar.prototype.updateHealthBar = function () {
+        this.health = this.scenario.environnement;
         // Ensure health is within the valid range (0 to 100)
         this.health = Math.max(0, Math.min(this.health, 100));
         // Update the width of the health fill element
