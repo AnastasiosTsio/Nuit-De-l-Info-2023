@@ -1,6 +1,7 @@
-import function GetConstantEffect() {
+import { Scenario } from "./scenario";
+function GetConstantEffect() {
     if (Scenario.environment < 100 || Scenario.globalHealth < 100) {
-        var i: number = 100 - (Scenario.environment + Scenario.globalHealth);
+        var i = 100 - (Scenario.environment + Scenario.globalHealth);
         if (Scenario.numberOfInhabitant > i) {
             Scenario.numberOfInhabitant -= i;
         }
@@ -26,6 +27,6 @@ import function GetConstantEffect() {
             Scenario.development = 0;
         }
     }
-};
+}
 // fonction à appeler à la fin de chaque question qui gère 
 // les effets dependants des variables globales et les met à jour

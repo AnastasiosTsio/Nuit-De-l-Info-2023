@@ -1,4 +1,4 @@
-import 
+import { Scenario } from "./scenario";
 
  function GetConstantEffect() {
     if (Scenario.environment < 100 || Scenario.globalHealth < 100) {
