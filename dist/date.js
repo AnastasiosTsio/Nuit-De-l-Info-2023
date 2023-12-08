@@ -8,9 +8,9 @@ var gameDate = /** @class */ (function () {
     };
     gameDate.prototype.drawDate = function () {
         this.ctx.fillStyle = "black";
-        this.ctx.font = "50px Boulder";
+        this.ctx.font = "70px Boulder";
         var canvas = document.getElementById("gameCanvas");
-        this.ctx.fillText(this.date.toString(), canvas.width - 115, 40);
+        this.ctx.fillText(this.date.toString(), canvas.width - 160, 60);
     };
     gameDate.prototype.updateDate = function (event) {
         this.date += 10;

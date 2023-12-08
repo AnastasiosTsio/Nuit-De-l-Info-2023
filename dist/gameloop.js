@@ -21,6 +21,7 @@ var backgroundImages = [
 ];
 var bg = document.getElementById("changebg");
 function cyclebg() {
+    console.log("cyclebg");
     document.body.style.backgroundImage = backgroundImages[backgroundImageIndex];
     backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
@@ -31,6 +32,7 @@ function clearCanvas() {
 function updateGame() {
     clearCanvas();
     date.drawDate();
+    console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
     healthBar.checkEnd();

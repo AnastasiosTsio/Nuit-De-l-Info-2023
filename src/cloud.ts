@@ -11,25 +11,38 @@ export class Cloud {
     this.messanger = new PeasantMessage();
   }
 
-  drawCloud() {
-    if (this.isCloudVisible) {
-      const text = this.getCurrentMessage();
-          
-      this.ctx.font = "18px Arial";
-      const textWidth = this.ctx.measureText(text).width;
+drawCloud() {
+  if (this.isCloudVisible) {
+    const text = this.getCurrentMessage();
+    const padding = 15;
 
-      const cloudWidth = textWidth + 30; // Adjust as needed
-      const cloudHeight = 100; // Adjust as needed
+    this.ctx.font = "18px Arial";
+    const textWidth = this.ctx.measureText(text).width;
 
-      this.ctx.fillStyle = "#C7E8CA";
-      const canvas: any = document.getElementById("gameCanvas");     
-      this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
-      this.ctx.fillStyle = "black";
-      this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
+    const cloudWidth = textWidth + padding * 2 + 50; // Increase the cloud width
+    const cloudHeight = 150; // Increase the cloud height
 
+    const canvas: any = document.getElementById("gameCanvas");
+    const x = canvas.width - cloudWidth;
+    const y = 50;
 
-    }
+    // Draw cloud shape
+    this.ctx.beginPath();
+    this.ctx.moveTo(x + 20, y + 50);
+    this.ctx.quadraticCurveTo(x, y + 50, x, y + 75);
+    this.ctx.quadraticCurveTo(x, y + 100, x + 25, y + 100);
+    this.ctx.lineTo(x + cloudWidth - 25, y + 100);
+    this.ctx.quadraticCurveTo(x + cloudWidth, y + 100, x + cloudWidth, y + 75);
+    this.ctx.quadraticCurveTo(x + cloudWidth, y + 50, x + cloudWidth - 20, y + 50);
+    this.ctx.closePath();
+
+    this.ctx.fillStyle = "#AFD6EC";
+    this.ctx.fill();
+    this.ctx.fillStyle = "black";
+    this.ctx.fillText(text, x + padding, y + 95 - padding);
   }
+}
+
 
   toggleCloudVisibility(event: any) {
     this.isCloudVisible = !this.isCloudVisible;

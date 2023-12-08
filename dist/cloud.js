@@ -8,15 +8,27 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
+            var padding = 15;
             this.ctx.font = "18px Arial";
             var textWidth = this.ctx.measureText(text).width;
-            var cloudWidth = textWidth + 30; // Adjust as needed
-            var cloudHeight = 100; // Adjust as needed
-            this.ctx.fillStyle = "#C7E8CA";
+            var cloudWidth = textWidth + padding * 2 + 50; // Increase the cloud width
+            var cloudHeight = 150; // Increase the cloud height
             var canvas = document.getElementById("gameCanvas");
-            this.ctx.fillRect(canvas.width - cloudWidth, 50, cloudWidth, cloudHeight);
+            var x = canvas.width - cloudWidth;
+            var y = 50;
+            // Draw cloud shape
+            this.ctx.beginPath();
+            this.ctx.moveTo(x + 20, y + 50);
+            this.ctx.quadraticCurveTo(x, y + 50, x, y + 75);
+            this.ctx.quadraticCurveTo(x, y + 100, x + 25, y + 100);
+            this.ctx.lineTo(x + cloudWidth - 25, y + 100);
+            this.ctx.quadraticCurveTo(x + cloudWidth, y + 100, x + cloudWidth, y + 75);
+            this.ctx.quadraticCurveTo(x + cloudWidth, y + 50, x + cloudWidth - 20, y + 50);
+            this.ctx.closePath();
+            this.ctx.fillStyle = "#AFD6EC";
+            this.ctx.fill();
             this.ctx.fillStyle = "black";
-            this.ctx.fillText(text, canvas.width - cloudWidth + 15, 100);
+            this.ctx.fillText(text, x + padding, y + 95 - padding);
         }
     };
     Cloud.prototype.toggleCloudVisibility = function (event) {
