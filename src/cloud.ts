@@ -4,17 +4,21 @@ import { Question } from "./question.js";
 export class Cloud {
   ctx: any;
   isCloudVisible: boolean;
+  endActivated: boolean = false;
   messanger: PeasantMessage;
   constructor(ctx: any) {
     this.ctx = ctx;
     this.isCloudVisible = true;
     this.messanger = new PeasantMessage();
+    
   }
   afterFirst: boolean = false;
   drawCloud() {
   if (this.isCloudVisible) {
     const text = this.getCurrentMessage();
-    if(text === "No message available" && this.afterFirst && this.messanger.messages.length === 0) {
+    if(text === "No message available" && this.afterFirst && this.messanger.messages.length === 0 && !this.endActivated) {
+      this.endActivated=true;
+
       window.location.href = "https://noahkohrs.github.io/NUIT-DE-L-INFO-2023/fin.html";
     }
     const padding = 15;

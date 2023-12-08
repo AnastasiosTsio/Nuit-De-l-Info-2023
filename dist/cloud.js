@@ -1,6 +1,7 @@
 import { PeasantMessage } from "./peasantmessage.js";
 var Cloud = /** @class */ (function () {
     function Cloud(ctx) {
+        this.endActivated = false;
         this.afterFirst = false;
         this.ctx = ctx;
         this.isCloudVisible = true;
@@ -9,7 +10,8 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
-            if (text === "No message available" && this.afterFirst && this.messanger.messages.length === 0) {
+            if (text === "No message available" && this.afterFirst && this.messanger.messages.length === 0 && !this.endActivated) {
+                this.endActivated = true;
                 window.location.href = "https://noahkohrs.github.io/NUIT-DE-L-INFO-2023/fin.html";
             }
             var padding = 15;
