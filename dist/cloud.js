@@ -9,7 +9,7 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
-            if (text === "No message available" && this.afterFirst) {
+            if (text === "No message available" && this.afterFirst && this.messanger.messages.length === 0) {
                 changePage('fin.html');
             }
             var padding = 15;
