@@ -27,7 +27,6 @@ export class healBar {
   updateHealthBar(newHealth: number) {
       // Ensure health is within the valid range (0 to 100)
       this.health = Math.max(0.5, Math.min(newHealth, 4.5));
-      console.log(this.health);
       // Update the width of the health fill element
       this.healthBar.style.width = (this.health/4.5)*100 + '%';
       this.healthBar.textContent = this.health.toFixed(3).toString()+"°C";

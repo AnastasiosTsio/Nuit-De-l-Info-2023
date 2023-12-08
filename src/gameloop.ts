@@ -27,13 +27,11 @@ var backgroundImages = [
 
 
 function cyclebg(index: number){
-  console.log("cyclebg");
   document.body.style.backgroundImage = backgroundImages[index];
   backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
 
 function updatebg() {
-  console.log("aled"+scenario.etat_environnement);
   if(scenario.etat_environnement > 0.75) {cyclebg(1); console.log("cyclebg");}
   if(scenario.etat_environnement > 1.25) cyclebg(2);
   if(scenario.etat_environnement > 1.75) cyclebg(3);
@@ -58,7 +56,6 @@ function makeAChoice(choice : boolean) {
   expert.setVisible();
   expert.getCurrentExpertAdvice(cloud.getCurrentDilemma(), choice);
   cloud.changeMessage();
-  console.log("scnearia etat env "+scenario.etat_environnement);
   healthBar.changeHealthBar(scenario.etat_environnement);
   cloud.afterFirst = true;
 } 

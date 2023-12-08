@@ -47,7 +47,6 @@ export class Scenario {
       this.evo_frustration += question.non.frustration;
       this.evo_habitants += question.non.habitants;
     }
-    console.log(reponse ? question.oui : question.non);
 
     let nbhabbeg = this.etat_habitants;
     let a = 200;
@@ -69,7 +68,6 @@ export class Scenario {
       this.etat_ressources - ((this.etat_habitants / nbhabbeg) * (50-this.evo_ressources)/50);
     this.etat_sante =
       this.etat_sante * ((10 + this.evo_sante) / 10) * ((6 + this.etat_environnement/100) / 6);
-    
-    console.log(this);
+
   }
 }

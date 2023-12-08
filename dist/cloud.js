@@ -10,7 +10,7 @@ var Cloud = /** @class */ (function () {
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
             if (text === "No message available" && this.afterFirst && this.messanger.messages.length === 0) {
-                window.location.href = "fin.html";
+                window.location.href = "https://noahkohrs.github.io/NUIT-DE-L-INFO-2023/fin.html";
             }
             var padding = 15;
             this.ctx.font = "18px Arial";

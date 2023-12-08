@@ -54,10 +54,7 @@ var PeasantMessage = /** @class */ (function () {
                         return [4 /*yield*/, fetchdata()];
                     case 1:
                         elements = _a.sent();
-                        console.log("FETCHED DATA");
-                        console.log(elements);
-                        this.messages = elements.map(function (element) { return new Question(element); }); // Create Question objects
-                        console.log(this.messages);
+                        this.messages = elements.map(function (element) { return new Question(element); });
                         this.selectNewMessage();
                         return [3 /*break*/, 3];
                     case 2:
@@ -79,7 +76,6 @@ var PeasantMessage = /** @class */ (function () {
     // Remove a random element from the array and return it
     PeasantMessage.prototype.removeRandomElement = function (arr) {
         if (arr.length === 0) {
-            console.log("-------------");
             return undefined; // Return undefined if the array is empty
         }
         var randomIndex = Math.floor(Math.random() * arr.length);

@@ -17,10 +17,7 @@ export class PeasantMessage {
   private async initialize() {
     try {
       const elements: any[] = await fetchdata();
-      console.log("FETCHED DATA");
-      console.log(elements);
-      this.messages = elements.map((element) => new Question(element)); // Create Question objects
-      console.log(this.messages);
+      this.messages = elements.map((element) => new Question(element)); 
       this.selectNewMessage();
     } catch (error) {
       console.error("An error occurred during initialization:", error);
@@ -39,7 +36,6 @@ export class PeasantMessage {
   // Remove a random element from the array and return it
   private removeRandomElement(arr: Question[]): Question | undefined {
     if (arr.length === 0) {
-      console.log("-------------");
       return undefined; // Return undefined if the array is empty
     }
     const randomIndex = Math.floor(Math.random() * arr.length);

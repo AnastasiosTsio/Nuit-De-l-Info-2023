@@ -44,7 +44,6 @@ var Question = /** @class */ (function () {
                 }
             });
         }
-        console.log(this);
     }
     return Question;
 }());

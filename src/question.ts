@@ -61,7 +61,6 @@ export class Question {
         }
       });
     }
-    console.log(this);
   }
   
 }
