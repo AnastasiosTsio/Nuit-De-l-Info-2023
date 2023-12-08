@@ -4,7 +4,15 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    /* background image in the center + 100px right but smaller : */
+    background-image: url("../images/paysage-0.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1024px 576px;
+
 }
+
+
 
 div{
     border: 1px solid red;
