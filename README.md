@@ -7,15 +7,8 @@
 - [Noé Flechon]()
 - [Julien Delphin]()
 
-# Temporaire :
+Lore:
+Tout commence en 1980, vous êtes élus roi du monde grâce à votre immortalité.
+Vous avez cependant une particularité: vous êtes narcoleptique et ne vous reveillez que tous les 5 ans et n'avez le temps de ne prendre qu'une décision, lourde de sens.
+Dans ce jeu vous êtes plongés dans un monde alternatif où l'ecologie est au centre de tout: le but est de préserver au maximum la Terre, tout en veillant à ne pas contrarier le peuple: il pourrait se révolter.
 
-## Installation
-```bash
-sudo npm install -g typescript
-```
-## Protocole de Compilation Typescript
-
-```bash
-tsc --watch
-```
-Pensez à laisser le terminal ouvert pour que la compilation se fasse en temps réel.
