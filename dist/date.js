@@ -13,7 +13,7 @@ var gameDate = /** @class */ (function () {
         this.ctx.fillText(this.date.toString(), canvas.width - 750, 70);
     };
     gameDate.prototype.updateDate = function (event) {
-        this.date += 10;
+        this.date += 5;
     };
     return gameDate;
 }());

@@ -19,6 +19,6 @@ export class gameDate {
       }
 
     updateDate(event: any) {
-        this.date+=10;
+        this.date+=5;
       }
 }
