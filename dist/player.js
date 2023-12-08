@@ -8,9 +8,6 @@ var Player = /** @class */ (function () {
         this.ctx = ctx;
     }
     Player.prototype.drawPlayer = function () {
-        var img = new Image();
-        img.src = "../images/roi00.png";
-        this.ctx.drawImage(img, 120, 160, 250, 250);
     };
     Player.prototype.movePlayer = function (event) {
         switch (event.key) {
