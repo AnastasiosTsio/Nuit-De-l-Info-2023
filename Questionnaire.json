@@ -1,24 +1,62 @@
-  {
-      "Questionnaire" : [
-          {
-              "question": "Planter des arbres pour réduire quasiment tout le CO2 ?",
-              "effects": {
-                "oui":{
-                  "habitant":15,
-                  "argent":1000
-                  },
-                "jsp": null,
-                "non": null
-              }
-          },
-          {
-              "question": "Privilégier de protéger les forêts existantes ou l'océan ?",
-              "effects": {
-                "oui": "hagrid",
-                "jsp": "est",
-                "non": "meilleur"
-              }
-          }
-      ]
+  
+{
+  "Questionnaire": [
+    {
+      "question": "Planter des arbres pour réduire quasiment tout le CO2 ?",
+      "oui": {
+        "environnement": 1,
+        "argent": -1,
+        "ressources": 1
+      },
+      "non": null,
+      "reponse": "oui",
+      "explication": "Ils ne pourront jamais capter tout le CO2 présent dans l’atmosphère à eux seuls. D’autant qu’un arbre planté aujourd’hui ne pourra absorber efficacement du CO2 qu’après 23 ans."
+    },
+    {
+      "question": "Privilégier la protection des forêts existantes et des océans ?",
+      "oui": {
+        "environnement": 1,
+        "argent": -1,
+        "ressources": 2
+      },
+      "non": null,
+      "reponse": "oui",
+      "explication": "L'océan produit 50 % de nos besoins en oxygène, absorbe 25 % de toutes les émissions de dioxyde de carbone et capture 90 % de la chaleur supplémentaire générée par ces émissions."
+    },
+    {
+      "question": "Viser une augmentation de 3° maximum pour éviter des séquelles?",
+      "oui": {
+        "environnement": null,
+        "argent": null,
+        "ressources": null
+      },
+      "non": null,
+      "reponse": "informatif",
+      "explication": "De grosses séquelles sur l’environnement apparaissent déjà à partir d’une augmentation de 1.5°."
+    },
+    {
+      "question": "Investir sur les nouvelles technologies pour résoudre le réchauffement climatique?",
+      "oui": null,
+      "non": {
+        "argent": -1,
+        "developpement": 2,
+        "frustration": -1,
+        "ressources": -1
+      },
+      "reponse": "non",
+      "explication": "Les progrès technologiques pourront peut-être dans un futur lointain nous permettre de coloniser de nouvelles planètes, comme solution de sauvegarde de l’espèce humaine… Mais aucune découverte scientifique majeure n’a pu influer sur le climat."
+    },
+    {
+      "question": "Investir sur les panneaux solaires?",
+      "oui": {
+        "environnement": 2,
+        "argent": -2,
+        "ressources": -1
+      },
+      "non": null,
+      "reponse": "oui",
+      "explication": "Les panneaux solaires ne sont pas la solution miracle, ils permettent seulement une diminution de l’impact de la production d'électricité."
     }
-    
+  ]
+}
+  

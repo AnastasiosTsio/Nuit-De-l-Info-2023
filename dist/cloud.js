@@ -7,9 +7,10 @@ var Cloud = /** @class */ (function () {
     }
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
-            this.ctx.fillStyle = "black";
+            this.ctx.fillStyle = "white";
             this.ctx.font = "16px Arial";
-            this.ctx.strokeRect(350, 100, 400, 100);
+            this.ctx.fillRect(350, 100, 400, 100);
+            this.ctx.fillStyle = "black";
             this.ctx.fillText(this.message.message, 380, 150);
         }
     };

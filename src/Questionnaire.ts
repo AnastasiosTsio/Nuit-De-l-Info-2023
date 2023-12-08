@@ -56,6 +56,23 @@ function getEffectByIndexJsp(jsonData: any, index: number): string | undefined {
   }
 }
 
+export function getReponseByIndex(jsonData: any, index: number): string | undefined {
+  if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
+    return jsonData.Questionnaire[index].reponse;
+  } else {
+    return undefined;
+  }
+}
+
+export function getExplicationByIndex(jsonData: any, index: number): string | undefined {
+  if (jsonData && jsonData.Questionnaire && jsonData.Questionnaire.length > 0) {
+    return jsonData.Questionnaire[index].explication;
+  } else {
+    return undefined;
+  }
+}
+
+
 
 // Utiliser la fonction pour obtenir la première question
 // getQuestionnaireJSON().then((jsonData:any) => {
@@ -74,3 +91,8 @@ function getEffectByIndexJsp(jsonData: any, index: number): string | undefined {
 export function getFirstQuestion(jsonData: any) {
     return getQuestionByIndex(jsonData, 0);
   }
+
+export function getQuestionRandom(jsonData:any) {
+    var random = Math.floor(Math.random() * 6);
+    return getQuestionByIndex(jsonData, random);
+}
