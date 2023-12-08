@@ -32,7 +32,6 @@ function clearCanvas() {
 function updateGame() {
     clearCanvas();
     date.drawDate();
-    player.drawPlayer();
     console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);

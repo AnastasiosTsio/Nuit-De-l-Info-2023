@@ -11,7 +11,6 @@ let player = new Player(ctx);
 let date = new gameDate(1965, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
-
 canvas.width = (window.innerWidth/10)*9;
 
 var backgroundImageIndex = 0;
@@ -38,7 +37,6 @@ function clearCanvas() {
 function updateGame() {
   clearCanvas();
   date.drawDate();
-  player.drawPlayer();
   console.log(cloud.isCloudVisible);
   cloud.drawCloud();
   requestAnimationFrame(updateGame);

@@ -16,9 +16,7 @@ export class Player {
   }
 
   drawPlayer() {
-    var img = new Image();
-    img.src = "../images/roi00.png"; 
-    this.ctx.drawImage(img, 120, 160, 250, 250);
+
   }
 
   movePlayer(event: any) {
