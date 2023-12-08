@@ -14,8 +14,8 @@ export class Cloud {
   drawCloud() {
   if (this.isCloudVisible) {
     const text = this.getCurrentMessage();
-    if(text === "No message available" && this.afterFirst) {
-      changePage('fin.html')
+    if(text === "No message available" && this.afterFirst && this.messanger.messages.length === 0) {
+      window.location.href = "fin.html";
     }
     const padding = 15;
 

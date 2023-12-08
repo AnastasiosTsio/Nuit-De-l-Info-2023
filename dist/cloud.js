@@ -9,8 +9,8 @@ var Cloud = /** @class */ (function () {
     Cloud.prototype.drawCloud = function () {
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
-            if (text === "No message available" && this.afterFirst) {
-                changePage('fin.html');
+            if (text === "No message available" && this.afterFirst && this.messanger.messages.length === 0) {
+                window.location.href = "fin.html";
             }
             var padding = 15;
             this.ctx.font = "18px Arial";
