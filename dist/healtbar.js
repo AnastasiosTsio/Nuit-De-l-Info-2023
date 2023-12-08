@@ -3,6 +3,12 @@ var healBar = /** @class */ (function () {
         this.health = scenario.environnement;
         this.healthBar = healthBar;
     }
+    healBar.prototype.checkEnd = function () {
+        if (this.health === 0) {
+            alert("Vous avez perdu");
+            changePage('index.html');
+        }
+    };
     // Function to get color based on health level
     healBar.prototype.getColorForHealth = function (health) {
         // Example: interpolate between green (100%) and red (0%)

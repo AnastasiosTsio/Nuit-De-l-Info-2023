@@ -35,6 +35,7 @@ function updateGame() {
     console.log(cloud.isCloudVisible);
     cloud.drawCloud();
     requestAnimationFrame(updateGame);
+    healthBar.checkEnd();
 }
 function makeAChoice(choice) {
     scenario.updateScenario(cloud.getCurrentDilemma(), choice);
