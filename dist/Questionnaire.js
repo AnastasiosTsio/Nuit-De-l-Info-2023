@@ -1,16 +1,16 @@
 // Importer le module fs pour la gestion des fichiers
 // const fs = require('fs');
 var questionnaireJSON;
-var jsonFile = '../Questionnaire.json';
+var jsonFile = "Questionnaire.json";
 function fetchdata() {
     return fetch(jsonFile)
-        .then(function (response) { return response.json(); })
+        .then(function (response) { return response.json(); }) // aled
         .then(function (data) {
         // Utilisez les données JSON ici
         questionnaireJSON = data;
     })
         .catch(function (error) {
-        console.error('Une erreur s\'est produite lors de la récupération du fichier JSON :', error);
+        console.error("Une erreur s'est produite lors de la récupération du fichier JSON :", error);
     });
 }
 export function getQuestionnaireJSON() {
