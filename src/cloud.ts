@@ -2,11 +2,9 @@ import { PeasantMessage } from "./peasantmessage.js";
 import { Question } from "./question.js";
 
 export class Cloud {
-  ctx: any;
   isCloudVisible: boolean;
   messanger: PeasantMessage;
-  constructor(ctx: any) {
-    this.ctx = ctx;
+  constructor() {
     this.isCloudVisible = true;
     this.messanger = new PeasantMessage();
   }
@@ -16,30 +14,29 @@ drawCloud() {
     const text = this.getCurrentMessage();
     const padding = 15;
 
-    this.ctx.font = "18px Arial";
-    const textWidth = this.ctx.measureText(text).width;
+    // this.ctx.font = "18px Arial";
+    // const textWidth = this.ctx.measureText(text).width;
 
-    const cloudWidth = textWidth + padding * 2  ; // Increase the cloud width
-    const cloudHeight = 150; // Increase the cloud height
+    // const cloudWidth = textWidth + padding * 2  ; // Increase the cloud width
+    // const cloudHeight = 150; // Increase the cloud height
 
-    const canvas: any = document.getElementById("gameCanvas");
-    const x = canvas.width - cloudWidth;
-    const y = 50;
+    const cloudMessage: any = document.getElementById("messageText");
+
 
     // Draw cloud shape
-    this.ctx.beginPath();
-    this.ctx.moveTo(x + 20, y + 50);
-    this.ctx.quadraticCurveTo(x, y + 50, x, y + 75);
-    this.ctx.quadraticCurveTo(x, y + 100, x + 25, y + 100);
-    this.ctx.lineTo(x + cloudWidth - 25, y + 100);
-    this.ctx.quadraticCurveTo(x + cloudWidth, y + 100, x + cloudWidth, y + 75);
-    this.ctx.quadraticCurveTo(x + cloudWidth, y + 50, x + cloudWidth - 20, y + 50);
-    this.ctx.closePath();
+    // this.ctx.beginPath();
+    // this.ctx.moveTo(x + 20, y + 50);
+    // this.ctx.quadraticCurveTo(x, y + 50, x, y + 75);
+    // this.ctx.quadraticCurveTo(x, y + 100, x + 25, y + 100);
+    // this.ctx.lineTo(x + cloudWidth - 25, y + 100);
+    // this.ctx.quadraticCurveTo(x + cloudWidth, y + 100, x + cloudWidth, y + 75);
+    // this.ctx.quadraticCurveTo(x + cloudWidth, y + 50, x + cloudWidth - 20, y + 50);
+    // this.ctx.closePath();
 
-    this.ctx.fillStyle = "#AFD6EC";
-    this.ctx.fill();
-    this.ctx.fillStyle = "black";
-    this.ctx.fillText(text, x + padding, y + 95 - padding);
+    // this.ctx.fillStyle = "#AFD6EC";
+    // this.ctx.fill();
+    // this.ctx.fillStyle = "black";
+    // this.ctx.fillText(text, x + padding, y + 95 - padding);
   }
 }
 

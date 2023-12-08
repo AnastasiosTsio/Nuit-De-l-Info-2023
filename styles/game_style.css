@@ -12,7 +12,14 @@ body {
 
 }
 
-
+.date {
+    font-family: monospace;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .answers{
     display: flex;
@@ -34,6 +41,15 @@ body {
     background-color: green;
     width: 100%; /* This will be adjusted based on the health percentage */
     transition: width 0.5s; /* Smooth transition when health changes */
+}
+
+.messageText {
+    font-family: monospace;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 

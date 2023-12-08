@@ -1,7 +1,6 @@
 import { PeasantMessage } from "./peasantmessage.js";
 var Cloud = /** @class */ (function () {
-    function Cloud(ctx) {
-        this.ctx = ctx;
+    function Cloud() {
         this.isCloudVisible = true;
         this.messanger = new PeasantMessage();
     }
@@ -9,26 +8,24 @@ var Cloud = /** @class */ (function () {
         if (this.isCloudVisible) {
             var text = this.getCurrentMessage();
             var padding = 15;
-            this.ctx.font = "18px Arial";
-            var textWidth = this.ctx.measureText(text).width;
-            var cloudWidth = textWidth + padding * 2; // Increase the cloud width
-            var cloudHeight = 150; // Increase the cloud height
-            var canvas = document.getElementById("gameCanvas");
-            var x = canvas.width - cloudWidth;
-            var y = 50;
+            // this.ctx.font = "18px Arial";
+            // const textWidth = this.ctx.measureText(text).width;
+            // const cloudWidth = textWidth + padding * 2  ; // Increase the cloud width
+            // const cloudHeight = 150; // Increase the cloud height
+            var cloudMessage = document.getElementById("messageText");
             // Draw cloud shape
-            this.ctx.beginPath();
-            this.ctx.moveTo(x + 20, y + 50);
-            this.ctx.quadraticCurveTo(x, y + 50, x, y + 75);
-            this.ctx.quadraticCurveTo(x, y + 100, x + 25, y + 100);
-            this.ctx.lineTo(x + cloudWidth - 25, y + 100);
-            this.ctx.quadraticCurveTo(x + cloudWidth, y + 100, x + cloudWidth, y + 75);
-            this.ctx.quadraticCurveTo(x + cloudWidth, y + 50, x + cloudWidth - 20, y + 50);
-            this.ctx.closePath();
-            this.ctx.fillStyle = "#AFD6EC";
-            this.ctx.fill();
-            this.ctx.fillStyle = "black";
-            this.ctx.fillText(text, x + padding, y + 95 - padding);
+            // this.ctx.beginPath();
+            // this.ctx.moveTo(x + 20, y + 50);
+            // this.ctx.quadraticCurveTo(x, y + 50, x, y + 75);
+            // this.ctx.quadraticCurveTo(x, y + 100, x + 25, y + 100);
+            // this.ctx.lineTo(x + cloudWidth - 25, y + 100);
+            // this.ctx.quadraticCurveTo(x + cloudWidth, y + 100, x + cloudWidth, y + 75);
+            // this.ctx.quadraticCurveTo(x + cloudWidth, y + 50, x + cloudWidth - 20, y + 50);
+            // this.ctx.closePath();
+            // this.ctx.fillStyle = "#AFD6EC";
+            // this.ctx.fill();
+            // this.ctx.fillStyle = "black";
+            // this.ctx.fillText(text, x + padding, y + 95 - padding);
         }
     };
     Cloud.prototype.toggleCloudVisibility = function (event) {

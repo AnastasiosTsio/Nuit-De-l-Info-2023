@@ -1,10 +1,8 @@
 export class gameDate {
     date:number;
-    ctx:any;
 
-    constructor(date:number,ctx:any) {
+    constructor(date:number) {
         this.date = date;
-        this.ctx = ctx;
     }
 
     getDate() {
@@ -12,11 +10,11 @@ export class gameDate {
     }
 
     drawDate() {
-        this.ctx.fillStyle = "black";
-        this.ctx.font = "70px Boulder";
-        const canvas: any = document.getElementById("gameCanvas");
-        this.ctx.fillText(this.date.toString(), canvas.width - 200, 70);
-      }
+        // this.ctx.fillStyle = "black";
+        // this.ctx.font = "70px Boulder";
+        const dateContainer: any = document.getElementById("date");
+        dateContainer.innerHTML = this.date;      
+    }
 
     updateDate(event: any) {
         this.date+=10;

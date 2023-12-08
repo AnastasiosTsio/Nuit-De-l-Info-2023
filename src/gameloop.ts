@@ -1,14 +1,11 @@
 import { Cloud } from "./cloud.js";
 import { gameDate } from "./date.js";
-import { Player } from "./player.js";
 import { Scenario } from "./scenario.js";
 import { healBar } from "./healtbar.js";
 
 const canvas: any = document.getElementById("gameCanvas");
-const ctx: any = canvas.getContext("2d");
-let cloud = new Cloud(ctx);
-let player = new Player(ctx);
-let date = new gameDate(1965, ctx);
+let cloud = new Cloud();
+let date = new gameDate(1965);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
 
@@ -31,12 +28,7 @@ function cyclebg() {
 }
 
 
-function clearCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
 function updateGame() {
-  clearCanvas();
   date.drawDate();
   console.log(cloud.isCloudVisible);
   cloud.drawCloud();
