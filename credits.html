@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            background-image: url('images/parchemin.jpg'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .Button1 {
+          font-family: monospace;
+          background-color: #d3df2e;
+          color: #000000;
+          border: none;
+          border-radius: 8px;
+          width:300px;
+          height: 75px;
+          transition: .3s;  
+          font-size: 40px;
+          margin-top: 10%;
+                
+        }
+        .Button1:hover {
+          background-color: #d3df2e;
+          color: #f3f7fe;
+          cursor: pointer;
+        }
+
+        .text{
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">Vous êtes un immortel, devenu roi de la planète entière après qu’une <br>
+        réunion de tous les pays vous ai nommé pour votre grand savoir. Cependant <br>
+        cette immortalité à un prix et vous souffrez de grave narcolepsie vous <br>
+        permettant de n'être réveillé que très rarement seulement le temps d’une <br>
+        décision. Guidez, avec l’aide de GIEC, votre grand conseiller, la population <br>
+        terrestre pour permettre à cette dernière de survivre et de sauver la planète.
+    </div>
+    <button onclick="changePage('index.html')" class="Button1">Recommencer</button>
+    <script src="dist/index.js"></script>
+</body>
+</html>
