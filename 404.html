@@ -3,8 +3,44 @@
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="styles/main_menu.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            background-image: url('images/parchemin.jpg'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .Button1 {
+          font-family: monospace;
+          background-color: #2e31df;
+          color: #000000;
+          border: none;
+          border-radius: 8px;
+          width:300px;
+          height: 75px;
+          transition: .3s;  
+          font-size: 40px;
+                
+        }
+        .Button1:hover {
+          background-color: #2e31df;
+          color: #f3f7fe;
+          cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>404 Tu fais quoi ici?</h1>
+    <button onclick="changePage('index.html')" class="Button1">Page d'accueil</button>
 </body>
 </html>
