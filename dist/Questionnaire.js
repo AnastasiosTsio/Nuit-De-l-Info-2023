@@ -69,10 +69,3 @@ export function getExplicationByIndex(jsonData, index) {
 //   console.log("First Effect Non:", firstEffectNon);
 //   console.log("First Effect Jsp:", firstEffectJsp);
 // });
-export function getFirstQuestion(jsonData) {
-    return getQuestionByIndex(jsonData, 0);
-}
-export function getQuestionRandom(jsonData) {
-    var random = Math.floor(Math.random() * 5);
-    return getQuestionByIndex(jsonData, random);
-}

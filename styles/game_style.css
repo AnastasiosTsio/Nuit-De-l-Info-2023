@@ -40,3 +40,60 @@ canvas {
     width: 100%; /* This will be adjusted based on the health percentage */
     transition: width 0.5s; /* Smooth transition when health changes */
 }
+
+
+.noButton {
+  font-family: monospace;
+  background-color: #DF2E38;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  width:150px;
+  height: 75px;
+  transition: .3s;  
+  font-size: 40px;
+  
+}
+.noButton:hover {
+  background-color: #DF2E38;
+  color: #f3f7fe;
+  cursor: pointer;
+}
+.yesButton{
+    font-family: monospace;
+    background-color: #5D9C59;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    height: 75px;
+    transition: .3s;  
+    font-size: 40px;
+    
+    }
+
+.yesButton:hover {
+    background-color: #5D9C59;
+    color: #f3f7fe;
+    cursor: pointer;
+    }
+
+
+.nextButton{
+    font-family: monospace;
+    background-color: #3066ED;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    height: 75px;
+    transition: .3s;  
+    font-size: 40px;
+    
+    }
+
+.nextButton:hover {
+    background-color: #3066ED;
+    color: #f3f7fe;
+    cursor: pointer;
+    }

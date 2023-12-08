@@ -1,62 +1,283 @@
-  
-{
-  "Questionnaire": [
-    {
-      "question": "Planter des arbres pour réduire quasiment tout le CO2 ?",
-      "oui": {
-        "environnement": 1,
-        "argent": -1,
-        "ressources": 1
+  {
+    "Questionnaire": [
+      {
+        "question": "Planter des arbres pour réduire quasiment tout le CO2 ?",
+        "oui": {
+          "environnement": 1,
+          "argent": -1,
+          "ressources": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Ils ne pourront jamais capter tout le CO2 présent dans l’atmosphère à eux seuls. D’autant qu’un arbre planté aujourd’hui ne pourra absorber efficacement du CO2 qu’après 23 ans."
       },
-      "non": null,
-      "reponse": "oui",
-      "explication": "Ils ne pourront jamais capter tout le CO2 présent dans l’atmosphère à eux seuls. D’autant qu’un arbre planté aujourd’hui ne pourra absorber efficacement du CO2 qu’après 23 ans."
-    },
-    {
-      "question": "Privilégier la protection des forêts existantes et des océans ?",
-      "oui": {
-        "environnement": 1,
-        "argent": -1,
-        "ressources": 2
+      {
+        "question": "Privilégier la protection des forêts existantes et des océans ?",
+        "oui": {
+          "environnement": 1,
+          "argent": -1,
+          "ressources": 2
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "L'océan produit 50 % de nos besoins en oxygène, absorbe 25 % de toutes les émissions de dioxyde de carbone et capture 90 % de la chaleur supplémentaire générée par ces émissions."
       },
-      "non": null,
-      "reponse": "oui",
-      "explication": "L'océan produit 50 % de nos besoins en oxygène, absorbe 25 % de toutes les émissions de dioxyde de carbone et capture 90 % de la chaleur supplémentaire générée par ces émissions."
-    },
-    {
-      "question": "Viser une augmentation de 3° maximum pour éviter des séquelles?",
-      "oui": {
-        "environnement": null,
-        "argent": null,
-        "ressources": null
+      {
+        "question": "Viser une augmentation de 3° maximum pour éviter des séquelles?",
+        "oui": {
+          "environnement": null,
+          "argent": null,
+          "ressources": null
+        },
+        "non": null,
+        "reponse": "informatif",
+        "explication": "De grosses séquelles sur l’environnement apparaissent déjà à partir d’une augmentation de 1.5°."
       },
-      "non": null,
-      "reponse": "informatif",
-      "explication": "De grosses séquelles sur l’environnement apparaissent déjà à partir d’une augmentation de 1.5°."
-    },
-    {
-      "question": "Investir sur les nouvelles technologies pour résoudre le réchauffement climatique?",
-      "oui": null,
-      "non": {
-        "argent": -1,
-        "developpement": 2,
-        "frustration": -1,
-        "ressources": -1
+      {
+        "question": "Investir sur les nouvelles technologies pour résoudre le réchauffement climatique?",
+        "oui": null,
+        "non": {
+          "argent": -1,
+          "developpement": 2,
+          "frustration": -1,
+          "ressources": -1
+        },
+        "reponse": "non",
+        "explication": "Les progrès technologiques pourront peut-être dans un futur lointain nous permettre de coloniser de nouvelles planètes, comme solution de sauvegarde de l’espèce humaine… Mais aucune découverte scientifique majeure n’a pu influer sur le climat."
       },
-      "reponse": "non",
-      "explication": "Les progrès technologiques pourront peut-être dans un futur lointain nous permettre de coloniser de nouvelles planètes, comme solution de sauvegarde de l’espèce humaine… Mais aucune découverte scientifique majeure n’a pu influer sur le climat."
-    },
-    {
-      "question": "Investir sur les panneaux solaires?",
-      "oui": {
-        "environnement": 2,
-        "argent": -2,
-        "ressources": -1
+      {
+        "question": "Investir sur les panneaux solaires?",
+        "oui": {
+          "environnement": 2,
+          "argent": -2,
+          "ressources": -1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Les panneaux solaires ne sont pas la solution miracle, ils permettent seulement une diminution de l’impact de la production d'électricité."
       },
-      "non": null,
-      "reponse": "oui",
-      "explication": "Les panneaux solaires ne sont pas la solution miracle, ils permettent seulement une diminution de l’impact de la production d'électricité."
-    }
-  ]
-}
-  
+      {
+        "question": "Doit-on interdire le pétrole?",
+        "oui": {
+          "environnement": 2,
+          "argent": -1,
+          "developpement": -1,
+          "frustration": 3,
+          "ressources": 1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "Interdire le pétrole peut améliorer la situation cependant, à l'heure actuelle, aucune véritable solution de masse n’est viable pour le remplacer."
+      },
+      {
+        "question": "Doit-on taxer l'essence ?",
+        "oui": {
+          "argent": 1,
+          "frustration": 1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "Au vu du context actuel, l’impact serait moindre sur l’environnement car le pétrole n’est pas remplaçable à grande échelles."
+      },
+      {
+        "question": "Doit-on interdire l'elevage de viande ?",
+        "oui": {
+          "sante": -1,
+          "environnement": 2,
+          "frustration": 2
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "Les élevages destiné à la viande ont un fort impact sur l’environnement cependant les interdire est extrême et la santé des populations peut en être impactée. Il faudrait cependant les diminuer et diminuer notre consommation de viande."
+      },
+      {
+        "question": "Doit-on interdire l'energie nucleaire ?",
+        "oui": {
+          "argent": -1,
+          "developpement": -3,
+          "frustration": 2,
+          "ressources": 1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "A l’heure actuelle, les énergies renouvelables produisent trop peu pour subvenir au besoin d’un pays entier. Il faudrait cependant augmenter la part d’énergie renouvelable dans la production d'électricité. L’energie nucléaire est d’ailleurs décarbonée."
+      },
+      {
+        "question": "Devons-nous promouvoir le train ?",
+        "oui": {
+          "environnement": 2
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Le train est un moyen de transport peu polluant"
+      },
+      {
+        "question": "Devons-nous promouvoir un style de vie plus ecologique ?",
+        "oui": {
+          "environnement": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Les petites actions de chacun peuvent influencer l’effet global et ainsi améliorer la situation. Il faut continuer de faire ce que l’on peut à son échelle."
+      },
+      {
+        "question": "Dois-t-on promouvoir le vélo et le transport en commun dans les grandes villes ? ",
+        "oui": {
+          "environnement": 1,
+          "sante": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "La plupart des trajets en villes peuvent être fait sans voitures, en vélo ou en transport en commun permettant de diminuer les émissions de dioxyde de carbone et d'améliorer la santé des citoyens en maintenant une activité sportive"
+      },
+      {
+        "question": "Doit-on limiter grandement la consommation d’eau des citoyens? ",
+        "oui": {
+          "frustration": 3,
+          "ressources": 1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "Limiter la consommation est extrême cependant, il faut sensibiliser les populations pour éviter le gaspillage inutile."
+      },
+      {
+        "question": "Doit-on améliorer les logements?",
+        "oui": {
+          "environnement": 1,
+          "argent": -1,
+          "developpement": 1,
+          "frustration": -2
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Une grande partie de la consommation d'énergie d’un logement provient de son chauffage. Or, certains logements trop vieux perdent énormément de chaleur et obligent donc une plus grosse consommation. Ainsi, mieux isoler un logement permet de limiter son empreinte carbone et donc son impact sur l’environnement."
+      },
+      {
+        "question": "Faut-il mettre en place une taxe carbone pour les citoyens?",
+        "oui": {
+          "environnement": 1,
+          "argent": 1,
+          "frustration": 2
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "La population est certes contre, cette taxe a montré son efficacité et permet de diminuer l’empreinte carbone mais n’est pas très éthique."
+      },
+      {
+        "question": "Faut-il emprisonner tous les pollueurs ?",
+        "oui": {
+          "environnement": 1,
+          "frustration": 3,
+          "habitants": -1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "C’est tres extreme et assez peu utile..."
+      },
+      {
+        "question": "Faut-il emprisonner tous les pollueurs ?",
+        "oui": {
+          "environnement": 1,
+          "frustration": 3,
+          "habitants": -1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "C’est tres extreme et assez peu utile..."
+      },
+      {
+        "question": "Faut-il financer un système de recyclage",
+        "oui": {
+          "environnement": 1,
+          "argent": -1,
+          "ressources": 2
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Le recyclage est un point clé qui permet de diminuer l’empreinte carbone cependant, tout n’est pas recyclable"
+      },
+      {
+        "question": "Doit-on financer le développement du pays?",
+        "oui": {
+          "frustration": -2,
+          "environnement": -1,
+          "argent": -1,
+          "sante": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Le Développement du pays influence sur ses capacités à diminuer son impact cependant, pour se développer, il faut une grande quantité de ressource ce qui a un impact sur l’environnement"
+      },
+      {
+        "question": "Doit-on investir dans la protection des écosystèmes?",
+        "oui": {
+          "environnement": 2,
+          "argent": -1,
+          "ressources": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Les écosystèmes sont cruciales pour la survie de l'espèces humaine et le bon fonctionnement de la planète ainsi les protéger est tout aussi important"
+      },
+      {
+        "question": "Doit-on limiter à un enfant par couple ?",
+        "oui": {
+          "habitants": -2,
+          "environnement": 1,
+          "frustration": 2,
+          "ressources": 1
+        },
+        "non": null,
+        "reponse": "non",
+        "explication": "Cela pourrait être une solution temporaire cependant celle-ci n’est pas durable et très restrictive pour la population ainsi, elle serait sans doute peu accepter dans certains pays."
+      },
+      {
+        "question": "Doit-on réduire les impôts?",
+        "oui": {
+          "argent": -1,
+          "frustration": -2
+        },
+        "non": null,
+        "reponse": "",
+        "explication": "Cela n’a aucune influence sur l’environnement"
+      },
+      {
+        "question": "Doit-on augmenter les impôts?",
+        "oui": {
+          "argent": 1,
+          "frustration": 1
+        },
+        "non": null,
+        "reponse": "",
+        "explication": "Cela n’a aucune influence sur l’environnement"
+      },
+      {
+        "question": "Doit-on augmenter la vigilance sur les fraudes?",
+        "oui": {
+          "argent": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Ce choix aura de belles répercussions sur nos finances"
+      },
+      {
+        "question": "Devons-nous promouvoir la santé et l’activité physique?",
+        "oui": {
+          "sante": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "La sante des citoyens ne s’en portera que mieux!"
+      },
+      {
+        "question": "Devons-nous aider financièrement les entreprises durables?",
+        "oui": {
+          "argent": -1,
+          "environnement": 1
+        },
+        "non": null,
+        "reponse": "oui",
+        "explication": "Cette aide permettrait aux entreprises d’améliorer encore plus leur empreinte carbone et permettrait d’encourager les autres entreprises à suivre le mouvement."
+      }
+    ]
+  }

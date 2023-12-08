@@ -13,9 +13,9 @@ export class gameDate {
 
     drawDate() {
         this.ctx.fillStyle = "black";
-        this.ctx.font = "30px Arial";
-        this.ctx.strokeRect(450, 10, 200, 50);
-        this.ctx.fillText(this.date.toString(), 500, 50);
+        this.ctx.font = "50px Boulder";
+        const canvas: any = document.getElementById("gameCanvas");
+        this.ctx.fillText(this.date.toString(), canvas.width - 115, 40);
       }
 
     updateDate(event: any) {
