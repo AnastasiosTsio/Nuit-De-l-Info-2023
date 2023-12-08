@@ -9,12 +9,11 @@ var nbhabbeg;
 function GetUpdateVar() {
     nbhabbeg = 5;
     a = 2;
-    EtNumberOfInhabitant = EtNumberOfInhabitant * ((a + numberOfInhabitant) / a) * ((a + numberOfInhabitant) / a);
+    EtNumberOfInhabitant = EtNumberOfInhabitant * ((a + numberOfInhabitant) / a) * ((5 + ETglobalHealth) / 5);
     EtGlobalMoney = EtGlobalMoney * (numberOfInhabitant / nbhabbeg) * ((a * globalMoney) / a);
     EtEnvironment = EtEnvironment * (1 + (((30 - environment) / 10) * (numberOfInhabitant / nbhabbeg)));
-    EtHappiness = EtHappiness * ((10 - frustration) / 10) * ((+globalHealth) / );
-    EtRessources = EtRessources - (numberOfInhabitant / nbhabbeg);
+    EtHappiness = EtHappiness * ((10 - frustration) / 10) * ((5 + ETglobalHealth) / 5);
+    EtRessources = EtRessources - (numberOfInhabitant / nbhabbeg) * ressources * 0.1;
+    EtglobalHealth = EtglobalHealth * ((5 + globalHealth) / 5) * ((6 + EtEnvironment) / 6);
 }
 export {};
-// fonction à appeler à la fin de chaque question qui gère 
-// les effets dependants des variables globales et les met à jour
