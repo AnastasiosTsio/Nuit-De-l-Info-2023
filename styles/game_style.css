@@ -96,8 +96,8 @@ body {
 
 .answers {
     position: absolute;
-    bottom: 40px; /* Adjust this value to change the vertical position */
-    left: 50%;
+    bottom: 42px; /* Adjust this value to change the vertical position */
+    left: 53%;
     transform: translateX(-50%);
 
 }

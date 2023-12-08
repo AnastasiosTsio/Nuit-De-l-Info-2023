@@ -10,7 +10,8 @@ var player = new Player(ctx);
 var date = new gameDate(1965, ctx);
 var scenario = new Scenario();
 var healthBar = new healBar(scenario, document.getElementById("healthFill"));
-canvas.width = (window.innerWidth / 10) * 9;
+canvas.width = window.innerWidth - 100;
+canvas.height = window.innerHeight - 100;
 var backgroundImageIndex = 0;
 var backgroundImages = [
     "url('images/paysage-1.png')",

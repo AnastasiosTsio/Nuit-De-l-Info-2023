@@ -23,8 +23,9 @@ drawCloud() {
     const cloudHeight = 150; // Increase the cloud height
 
     const canvas: any = document.getElementById("gameCanvas");
-    const x = canvas.width - cloudWidth;
-    const y = 50;
+    // centered horizontally
+    const x = (canvas.width - cloudWidth) / 2 +50   ;
+    const y = 70;
 
     // Draw cloud shape
     this.ctx.beginPath();

@@ -14,8 +14,9 @@ var Cloud = /** @class */ (function () {
             var cloudWidth = textWidth + padding * 2; // Increase the cloud width
             var cloudHeight = 150; // Increase the cloud height
             var canvas = document.getElementById("gameCanvas");
-            var x = canvas.width - cloudWidth;
-            var y = 50;
+            // centered horizontally
+            var x = (canvas.width - cloudWidth) / 2 + 50;
+            var y = 70;
             // Draw cloud shape
             this.ctx.beginPath();
             this.ctx.moveTo(x + 20, y + 50);
