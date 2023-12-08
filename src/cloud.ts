@@ -10,10 +10,13 @@ export class Cloud {
     this.isCloudVisible = true;
     this.messanger = new PeasantMessage();
   }
-
-drawCloud() {
-  if (this.isCloudVisible) {
+  afterFirst: boolean = false;
+  drawCloud() {
+  if (this.isCloudVisible && this.afterFirst) {
     const text = this.getCurrentMessage();
+    if(text === "No message available") {
+      changePage('fin.html')
+    }
     const padding = 15;
 
     this.ctx.font = "18px Arial";

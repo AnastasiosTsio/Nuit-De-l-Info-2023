@@ -57,6 +57,7 @@ var PeasantMessage = /** @class */ (function () {
                         console.log("FETCHED DATA");
                         console.log(elements);
                         this.messages = elements.map(function (element) { return new Question(element); }); // Create Question objects
+                        console.log(this.messages);
                         this.selectNewMessage();
                         return [3 /*break*/, 3];
                     case 2:

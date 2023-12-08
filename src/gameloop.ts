@@ -9,7 +9,7 @@ const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
 let cloud = new Cloud(ctx);
 let expert = new Expert(ctx);
-let date = new gameDate(1965, ctx);
+let date = new gameDate(1980, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
 
@@ -26,12 +26,18 @@ var backgroundImages = [
 ];
 
 
-function cyclebg() {
+function cyclebg(index: number){
   console.log("cyclebg");
-  document.body.style.backgroundImage = backgroundImages[backgroundImageIndex];
+  document.body.style.backgroundImage = backgroundImages[index];
   backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
 }
 
+function updatebg() {
+  console.log("aled"+scenario.etat_environnement);
+  if(scenario.etat_environnement > 0.75) {cyclebg(1); console.log("cyclebg");}
+  if(scenario.etat_environnement > 1.25) cyclebg(2);
+  if(scenario.etat_environnement > 1.75) cyclebg(3);
+}
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -45,6 +51,7 @@ function updateGame() {
   cloud.drawCloud();
   requestAnimationFrame(updateGame);
   healthBar.checkEnd();
+  updatebg();
 }
 
 function makeAChoice(choice : boolean) {
@@ -52,19 +59,17 @@ function makeAChoice(choice : boolean) {
   expert.setVisible();
   expert.getCurrentExpertAdvice(cloud.getCurrentDilemma(), choice);
   cloud.changeMessage();
-  healthBar.changeHealthBar();
+  console.log("scnearia etat env "+scenario.etat_environnement);
+  healthBar.changeHealthBar(scenario.etat_environnement);
+  cloud.afterFirst = true;
 } 
 
 const noButton = document.getElementById("noButton");
 const yesButton = document.getElementById("yesButton");
-noButton.addEventListener("click", cloud.changeMessage.bind(cloud));
-yesButton.addEventListener("click", function () {
-  healthBar.changeHealthBar();
-  healthBar.updateHealthBar();
-});
 yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
-yesButton.addEventListener("click", cloud.changeMessage.bind(cloud));
 yesButton.addEventListener("click", date.updateDate.bind(date));
+noButton.addEventListener("click", date.updateDate.bind(date));
+
 
 updateGame();

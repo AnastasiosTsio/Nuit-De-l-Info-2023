@@ -33,7 +33,7 @@ body {
 .health-fill {
     height: 100%;
     background-color: green;
-    width: 100%; /* This will be adjusted based on the health percentage */
+    width: 2%; /* This will be adjusted based on the health percentage */
     transition: width 0.5s; /* Smooth transition when health changes */
 }
 
@@ -110,4 +110,11 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.health-bar {
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    transform: translateX(-50%);
 }
