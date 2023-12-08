@@ -8,7 +8,7 @@ const canvas: any = document.getElementById("gameCanvas");
 const ctx: any = canvas.getContext("2d");
 let cloud = new Cloud(ctx);
 let player = new Player(ctx);
-let date = new gameDate(1965, ctx);
+let date = new gameDate(1980, ctx);
 let scenario = new Scenario();
 let healthBar = new healBar(scenario, document.getElementById("healthFill"));
 
@@ -65,6 +65,6 @@ yesButton.addEventListener("click", makeAChoice.bind(this, true));
 noButton.addEventListener("click", makeAChoice.bind(this, false));
 yesButton.addEventListener("click", date.updateDate.bind(date));
 noButton.addEventListener("click", date.updateDate.bind(date));
-noButton.addEventListener("click", date.updateDate.bind(date));
+
 
 updateGame();
