@@ -1,30 +1,17 @@
 // Importer le module fs pour la gestion des fichiers
 // const fs = require('fs');
 
-var questionnaireJSON: any;
 
-const jsonFile = "Questionnaire.json";
-function fetchdata() {
+const jsonFile = 'Questionnaire.json';
+export function fetchdata() {
   return fetch(jsonFile)
-    .then((response) => response.json()) // aled
-    .then((data) => {
-      // Utilisez les données JSON ici
-      questionnaireJSON = data;
-    })
-    .catch((error) => {
-      console.error(
-        "Une erreur s'est produite lors de la récupération du fichier JSON :",
-        error
-      );
+    .then(response => response.json())
+    .then(jsonData => jsonData.Questionnaire)
+    .catch(error => {
+      console.error('Une erreur s\'est produite lors de la récupération du fichier JSON :', error);
     });
 }
-export function getQuestionnaireJSON() {
-  // Returning a promise to handle asynchronous behavior
-  return fetchdata().then(function () {
-    // Now you can use questionnaireJSON here or call other functions
-    return questionnaireJSON;
-  });
-}
+
 
 // Définir une fonction pour récupérer la première question
 export function getQuestionByIndex(
@@ -101,7 +88,7 @@ export function getFirstQuestion(jsonData: any) {
   return getQuestionByIndex(jsonData, 0);
 }
 
-export function getQuestionRandom(jsonData: any) {
-  var random = Math.floor(Math.random() * 6);
-  return getQuestionByIndex(jsonData, random);
+export function getQuestionRandom(jsonData:any) {
+    var random = Math.floor(Math.random() * 5);
+    return getQuestionByIndex(jsonData, random);
 }
