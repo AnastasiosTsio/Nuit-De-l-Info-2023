@@ -1,6 +1,6 @@
 function GetConstantEffect() {
-    if (environment<100 | globalHealth<100 ) {
-        i=100-(environment+globalHealth);
+    if (environment<100 || globalHealth<100 ) {
+        var i: number = 100-(environment+globalHealth);
         if (numberOfInhabitant>i) {
             numberOfInhabitant-=i;
         }
